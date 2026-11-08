@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regena Systems Africa Ltd | Community Engineering for Water, Sanitation, Energy &amp; Food Systems</title>
+  <meta name="title" content="Regena Systems Africa Ltd | Community Engineering" />
+  <meta name="description" content="Regena Systems Africa Ltd is a community engineering company in Mukono, Uganda. We design, build and maintain affordable water, sanitation, clean energy, resource recovery, shelter and food systems, then stay under contract to keep them working." />
+  <meta name="author" content="Regena Systems Africa Ltd" />
+  <meta name="theme-color" content="#f4f9fc" />
+  <meta name="color-scheme" content="light dark" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Regena Systems Africa Ltd | Community Engineering" />
+  <meta property="og:description" content="We design, build and maintain affordable water, sanitation, clean energy, resource recovery, shelter and food systems, then stay under contract to keep them working." />
+  <meta property="og:image" content="assets/regena-logo.png" />
+
+  <link rel="icon" type="image/png" href="assets/regena-logo.png" />
+  <link rel="apple-touch-icon" href="assets/regena-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Space Grotesk"', "ui-sans-serif", "system-ui", "sans-serif"],
+            sans: ['"Inter"', "ui-sans-serif", "system-ui", "sans-serif"],
+            mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+          },
+          colors: {
+            bg: "rgb(var(--c-bg) / <alpha-value>)",
+            surface: "rgb(var(--c-surface) / <alpha-value>)",
+            surface2: "rgb(var(--c-surface2) / <alpha-value>)",
+            ink: "rgb(var(--c-ink) / <alpha-value>)",
+            inksoft: "rgb(var(--c-inksoft) / <alpha-value>)",
+            line: "rgb(var(--c-line) / <alpha-value>)",
+            primary: {
+              DEFAULT: "rgb(var(--c-primary) / <alpha-value>)",
+              strong: "rgb(var(--c-primary-strong) / <alpha-value>)",
+            },
+            accent: "rgb(var(--c-accent) / <alpha-value>)",
+            sun: "rgb(var(--c-sun) / <alpha-value>)",
+          },
+          maxWidth: { "8xl": "88rem" },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --c-bg: 244 249 252;
+      --c-surface: 255 255 255;
+      --c-surface2: 233 243 250;
+      --c-ink: 17 45 58;
+      --c-inksoft: 74 100 112;
+      --c-line: 12 79 113;
+      --c-primary: 11 122 184;
+      --c-primary-strong: 7 92 138;
+      --c-accent: 15 165 190;
+      --c-sun: 232 154 42;
+      --glass: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(12, 79, 113, 0.12);
+      --grid-line: rgba(12, 79, 113, 0.06);
+    }
+    .dark {
+      --c-bg: 6 20 29;
+      --c-surface: 13 35 47;
+      --c-surface2: 16 42 55;
+      --c-ink: 226 237 243;
+      --c-inksoft: 155 178 190;
+      --c-line: 255 255 255;
+      --c-primary: 56 189 248;
+      --c-primary-strong: 125 211 252;
+      --c-accent: 45 212 191;
+      --c-sun: 245 183 80;
+      --glass: rgba(9, 26, 36, 0.68);
+      --glass-border: rgba(255, 255, 255, 0.07);
+      --grid-line: rgba(255, 255, 255, 0.045);
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    section[id] { scroll-margin-top: 96px; }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+    #scroll-dot { animation: bob 1.6s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { #scroll-dot { animation: none; } }
+    html { background-color: rgb(var(--c-bg)); }
+    body {
+      background-color: rgb(var(--c-bg));
+      color: rgb(var(--c-ink));
+      font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+    /* Theme-driven surfaces switch instantly; only motion/emphasis properties animate.
+       (Transitioning background-color that is defined via a CSS custom property is
+       unreliable in Chromium when only the variable changes.) */
+    ::selection { background: rgb(var(--c-primary) / .22); }
+
+    .font-display { font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif; }
+    .u-label { font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: .18em; text-transform: uppercase; }
+
+    .glass {
+      background: var(--glass);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 46px 46px;
+    }
+
+    /* Below-the-fold sections fade in on scroll (JS). If JS is absent, they stay visible. */
+    html.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* Hero content animates on first paint via pure CSS, so it never depends on JS to be visible. */
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise .8s cubic-bezier(.16,1,.3,1) both; }
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; } }
+    /* cards that also need a hover lift: keep the reveal fade, add transform + border transitions */
+    .card-hover { transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .35s cubic-bezier(.16,1,.3,1), border-color .3s ease; }
+    .card-hover:hover { transform: translateY(-4px); transition-delay: 0s; }
+    .card-hover.reveal:not(.in) { transform: translateY(26px); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; transition: none; } .card-hover:hover { transform: none; } }
+
+    .img-fallback { background-image: linear-gradient(135deg, rgb(var(--c-primary-strong)) 0%, rgb(var(--c-primary)) 45%, rgb(var(--c-accent)) 100%) !important; }
+    .img-fallback::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px); background-size: 20px 20px; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .link-underline { position: relative; }
+    .link-underline::after {
+      content: ""; position: absolute; left: 0; bottom: -3px; height: 2px; width: 0;
+      background: rgb(var(--c-primary)); border-radius: 2px; transition: width .3s ease;
+    }
+    .link-underline:hover::after, .link-underline[data-active="true"]::after { width: 100%; }
+
+    /* Nav sits over the dark hero until scrolled, so its text stays light for contrast there.
+       Once the glass background appears (on scroll) the theme colours take over. */
+    #nav-inner:not(.glass) .nav-wordmark { color: #fff; }
+    #nav-inner:not(.glass) [data-nav] { color: rgba(255, 255, 255, .72); }
+    #nav-inner:not(.glass) [data-nav]:hover { color: #fff; }
+    #nav-inner:not(.glass) #theme-toggle,
+    #nav-inner:not(.glass) #menu-btn { color: #fff; border-color: rgba(255, 255, 255, .28); }
+  </style>
+
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        // Light is the default; only honour an explicit saved "dark" choice.
+        if (localStorage.getItem("regena-theme") === "dark") document.documentElement.classList.add("dark");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+  <!-- ============ NAV ============ -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+      <div id="nav-inner" class="mt-3 flex items-center justify-between rounded-2xl px-3 sm:px-4 py-2.5 transition-shadow duration-300">
+        <a href="#home" class="flex items-center gap-2.5 group shrink-0">
+          <img src="assets/regena-logo.png" alt="Regena Systems Africa" class="h-10 w-10 sm:h-11 sm:w-11 object-contain transition-transform duration-300 group-hover:scale-105" />
+          <span class="flex flex-col leading-none">
+            <span class="nav-wordmark font-display font-bold text-[15px] sm:text-base tracking-tight text-ink">Regena Systems Africa</span>
+            <span class="u-label text-[8.5px] text-primary mt-1">Community Engineering · Uganda</span>
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="#build" data-nav class="link-underline px-3 py-2 text-[12px] font-semibold u-label text-inksoft hover:text-ink transition-colors">What we build</a>
+          <a href="#model" data-nav class="link-underline px-3 py-2 text-[12px] font-semibold u-label text-inksoft hover:text-ink transition-colors">The model</a>
+          <a href="#evidence" data-nav class="link-underline px-3 py-2 text-[12px] font-semibold u-label text-inksoft hover:text-ink transition-colors">Evidence</a>
+          <a href="#site" data-nav class="link-underline px-3 py-2 text-[12px] font-semibold u-label text-inksoft hover:text-ink transition-colors">The site</a>
+          <a href="#partners" data-nav class="link-underline px-3 py-2 text-[12px] font-semibold u-label text-inksoft hover:text-ink transition-colors">Partners</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" aria-label="Toggle colour theme"
+            class="h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-primary hover:bg-primary/10 transition-colors">
+            <svg data-icon="sun" class="h-[18px] w-[18px] hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg data-icon="moon" class="h-[18px] w-[18px] block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+          <button id="menu-btn" class="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu">
+            <svg id="menu-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <svg id="menu-close" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="lg:hidden hidden mt-2 rounded-2xl glass p-2">
+        <a href="#build" class="mob-link block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">What we build</a>
+        <a href="#model" class="mob-link block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">The model</a>
+        <a href="#evidence" class="mob-link block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Evidence &amp; accountability</a>
+        <a href="#site" class="mob-link block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">The operating site</a>
+        <a href="#partners" class="mob-link block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Who we work with</a>
+        <a href="#contact" class="mob-link block px-4 py-3 mt-1 rounded-xl text-sm font-semibold text-center bg-primary text-white">Come and see the site</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden bg-[#06131c] pt-28 pb-20">
+      <div class="absolute inset-0 z-0">
+        <img id="hero-img" src="https://images.unsplash.com/photo-1553775927-a071d5a6a39a?auto=format&fit=crop&w=2000&q=80"
+             alt="Carrying water in rural East Africa" class="h-full w-full object-cover object-center opacity-55" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#06131c]/35 via-[#06131c]/78 to-[#06131c]"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#06131c]/85 via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-8xl w-full px-4 sm:px-6 lg:px-10">
+        <div class="max-w-3xl">
+          <h1 class="rise font-display font-bold text-white text-[2.1rem] leading-[1.12] sm:text-5xl lg:text-[3.6rem] tracking-tight">
+            Engineering that stays until<br class="hidden sm:block" />
+            what we build is <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-200 to-teal-200">still working</span>.
+          </h1>
+
+          <p class="rise mt-6 text-[15px] sm:text-lg text-slate-200/90 font-light leading-relaxed max-w-xl" style="animation-delay:.06s">
+            We design, build and maintain the systems a community depends on, then stay under contract to keep them working.
+          </p>
+
+          <div class="rise mt-8 flex flex-wrap items-center gap-3" style="animation-delay:.12s">
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary-strong transition-colors">
+              Come and see the site
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#model" class="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors">
+              How the model works
+            </a>
+          </div>
+
+          <div class="rise mt-10 flex flex-wrap gap-x-6 gap-y-3" style="animation-delay:.18s">
+            <span class="u-label text-[10px] text-slate-400">The systems we deliver</span>
+          </div>
+          <div class="rise mt-3 flex flex-wrap gap-2" style="animation-delay:.22s">
+            <span class="rounded-lg border border-white/12 bg-white/[.04] px-3 py-1.5 text-xs font-medium text-slate-200">Water</span>
+            <span class="rounded-lg border border-white/12 bg-white/[.04] px-3 py-1.5 text-xs font-medium text-slate-200">Sanitation</span>
+            <span class="rounded-lg border border-white/12 bg-white/[.04] px-3 py-1.5 text-xs font-medium text-slate-200">Renewable energy</span>
+            <span class="rounded-lg border border-white/12 bg-white/[.04] px-3 py-1.5 text-xs font-medium text-slate-200">Resource recovery</span>
+            <span class="rounded-lg border border-white/12 bg-white/[.04] px-3 py-1.5 text-xs font-medium text-slate-200">Shelter</span>
+            <span class="rounded-lg border border-white/12 bg-white/[.04] px-3 py-1.5 text-xs font-medium text-slate-200">Food systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2">
+        <span class="u-label text-[9px] text-slate-400">Scroll</span>
+        <span class="flex h-9 w-6 justify-center rounded-full border border-slate-500/40 p-1">
+          <span id="scroll-dot" class="h-2 w-1.5 rounded-full bg-accent"></span>
+        </span>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAND ============ -->
+    <section aria-label="Field measures" class="relative z-20 -mt-14 mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="reveal rounded-2xl bg-primary p-6 text-white shadow-xl shadow-primary/20">
+          <div class="font-display text-4xl font-bold" data-count="1">1</div>
+          <div class="u-label text-[10px] mt-2 text-white/85">Operating site</div>
+          <p class="text-xs text-white/75 mt-2 font-light leading-relaxed">Nakifuuma, a five-acre working farm in Mukono, Uganda.</p>
+        </div>
+        <div class="reveal rounded-2xl bg-surface border border-line/10 p-6 shadow-xl shadow-black/5" style="transition-delay:.06s">
+          <div class="font-display text-4xl font-bold text-ink"><span data-count="6">6</span></div>
+          <div class="u-label text-[10px] mt-2 text-primary">Integrated systems</div>
+          <p class="text-xs text-inksoft mt-2 font-light leading-relaxed">Water, sanitation, energy, recovery, shelter and food, run as one system rather than six service lines.</p>
+        </div>
+        <div class="reveal rounded-2xl bg-surface border border-line/10 p-6 shadow-xl shadow-black/5" style="transition-delay:.12s">
+          <div class="font-display text-4xl font-bold text-ink"><span data-count="95">0</span>%</div>
+          <div class="u-label text-[10px] mt-2 text-primary">Uptime target</div>
+          <p class="text-xs text-inksoft mt-2 font-light leading-relaxed">Performance reported to every customer twice a year, against a published record.</p>
+        </div>
+        <div class="reveal rounded-2xl bg-surface border border-line/10 p-6 shadow-xl shadow-black/5" style="transition-delay:.18s">
+          <div class="font-display text-4xl font-bold text-ink"><span data-count="48">0</span> hr</div>
+          <div class="u-label text-[10px] mt-2 text-primary">Fault response</div>
+          <p class="text-xs text-inksoft mt-2 font-light leading-relaxed">A response commitment on every commissioned system, with downtime hours logged.</p>
+        </div>
+      </div>
+      <p class="reveal mt-4 text-center text-xs text-inksoft font-light">
+        Every system hands over to a named, trained operator, and its baseline is measured on the day of handover, never reconstructed later.
+      </p>
+    </section>
+
+    <!-- ============ WHAT WE BUILD ============ -->
+    <section id="build" class="py-24 lg:py-32">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="max-w-2xl">
+          <span class="reveal u-label text-[11px] text-primary">What we build</span>
+          <h2 class="reveal font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+            Community engineering, across the systems a place actually needs.
+          </h2>
+          <p class="reveal text-inksoft mt-4 leading-relaxed font-light" style="transition-delay:.1s">
+            These are not separate service lines. They are one interconnected system, where waste from one becomes
+            the input to another, and the income from that is what makes the service affordable.
+          </p>
+        </div>
+
+        <div id="build-grid" class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+
+        <p class="reveal mt-8 text-sm text-inksoft font-light">
+          Where we work: households, schools, health facilities, churches and faith institutions, community markets, farms and enterprises.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ THE MODEL / VIABILITY TEST ============ -->
+    <section id="model" class="relative py-24 lg:py-32 bg-surface2/60 grid-bg border-y border-line/10">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div class="lg:col-span-5">
+            <span class="reveal u-label text-[11px] text-primary">The model</span>
+            <h2 class="reveal font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+              The viability test, applied before we build and not after.
+            </h2>
+            <p class="reveal text-inksoft mt-4 leading-relaxed font-light" style="transition-delay:.1s">
+              Financial credibility is the foundation for sustainable investment. We apply that test at project
+              level, before construction. Four questions have to hold:
+            </p>
+            <div class="reveal mt-8 rounded-2xl border border-primary/25 bg-primary/[.06] p-6" style="transition-delay:.15s">
+              <p class="font-display text-lg font-semibold text-ink leading-snug">
+                “If those answers do not hold, we say so, and we do not build it.”
+              </p>
+              <p class="text-sm text-inksoft mt-3 font-light leading-relaxed">
+                Declining unviable work protects the community from a stranded asset, and protects the
+                credibility of everything we do build.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+            <div class="reveal rounded-2xl bg-surface border border-line/10 p-6">
+              <span class="u-label text-[10px] text-primary">01</span>
+              <h3 class="font-display text-lg font-semibold text-ink mt-2">Who operates it?</h3>
+              <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">A named person, trained and accountable, identified before handover.</p>
+            </div>
+            <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.06s">
+              <span class="u-label text-[10px] text-primary">02</span>
+              <h3 class="font-display text-lg font-semibold text-ink mt-2">Who pays to keep it running?</h3>
+              <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">A service fee the community or institution can genuinely afford.</p>
+            </div>
+            <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.12s">
+              <span class="u-label text-[10px] text-primary">03</span>
+              <h3 class="font-display text-lg font-semibold text-ink mt-2">What offsets the cost?</h3>
+              <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Recovered waste becomes compost, feed or fuel, and that income lowers the fee.</p>
+            </div>
+            <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.18s">
+              <span class="u-label text-[10px] text-primary">04</span>
+              <h3 class="font-display text-lg font-semibold text-ink mt-2">What happens if it fails?</h3>
+              <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">A 48-hour response commitment and a published uptime record.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVIDENCE ============ -->
+    <section id="evidence" class="py-24 lg:py-32">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="max-w-2xl">
+          <span class="reveal u-label text-[11px] text-primary">Evidence &amp; accountability</span>
+          <h2 class="reveal font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+            We measure what we build, and publish how it performs.
+          </h2>
+          <p class="reveal text-inksoft mt-4 leading-relaxed font-light" style="transition-delay:.1s">
+            Most infrastructure has no performance record after handover. We create one as a condition of
+            doing the work, and that record is what makes a service contract, a warranty and an investment
+            case possible at all.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-px rounded-2xl overflow-hidden border border-line/10 bg-line/10 md:grid-cols-2">
+          <div class="reveal bg-bg p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg>
+              </span>
+              <h3 class="font-display text-lg font-semibold text-ink">Commissioning baseline</h3>
+            </div>
+            <p class="text-sm text-inksoft mt-3 font-light leading-relaxed">Flow, water quality, energy and output, measured on the day of handover and never reconstructed later.</p>
+          </div>
+          <div class="reveal bg-bg p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
+              </span>
+              <h3 class="font-display text-lg font-semibold text-ink">Service log</h3>
+            </div>
+            <p class="text-sm text-inksoft mt-3 font-light leading-relaxed">Every visit and every fault, with response time and downtime hours recorded.</p>
+          </div>
+          <div class="reveal bg-bg p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+              </span>
+              <h3 class="font-display text-lg font-semibold text-ink">Published uptime</h3>
+            </div>
+            <p class="text-sm text-inksoft mt-3 font-light leading-relaxed">Performance against a 95% target, reported to the customer twice a year.</p>
+          </div>
+          <div class="reveal bg-bg p-8">
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+              </span>
+              <h3 class="font-display text-lg font-semibold text-ink">Household evidence</h3>
+            </div>
+            <p class="text-sm text-inksoft mt-3 font-light leading-relaxed">Hours returned, money kept, fuel and feed displaced. The numbers a household feels.</p>
+          </div>
+        </div>
+
+        <p class="reveal mt-6 text-sm text-inksoft font-light">
+          <span class="text-ink font-medium">Why it matters.</span> Nobody can regulate, finance or scale what nobody is measuring. Our service contracts generate that data site by site, as a by-product of being paid to keep systems running.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ THE SITE ============ -->
+    <section id="site" class="relative py-24 lg:py-32 bg-[#06131c] text-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img id="site-img" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=80"
+             alt="Working farmland" class="h-full w-full object-cover opacity-25" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#06131c] via-[#06131c]/85 to-[#06131c]/60"></div>
+      </div>
+      <div class="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <span class="reveal u-label text-[11px] text-sky-300">Where the evidence comes from</span>
+            <h2 class="reveal font-display font-bold text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+              Nakifuuma, a working site and not a rendering.
+            </h2>
+            <p class="reveal text-slate-300 mt-4 leading-relaxed font-light max-w-2xl" style="transition-delay:.1s">
+              A five-acre farm in Mukono, Uganda, operated by Regena and used as a shared coordination and
+              learning centre. It is not a demonstration built to be shown. It is a working site with a
+              resident host community.
+            </p>
+
+            <div class="reveal mt-8 grid sm:grid-cols-2 gap-4" style="transition-delay:.15s">
+              <div class="rounded-xl border border-white/10 bg-white/[.04] p-4">
+                <h3 class="font-display font-semibold">A working demonstration</h3>
+                <p class="text-sm text-slate-400 mt-1 font-light">Visitors stand in it, not look at a slide.</p>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-white/[.04] p-4">
+                <h3 class="font-display font-semibold">A field data source</h3>
+                <p class="text-sm text-slate-400 mt-1 font-light">Real longitudinal numbers feed the work, not estimates.</p>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-white/[.04] p-4">
+                <h3 class="font-display font-semibold">A training ground</h3>
+                <p class="text-sm text-slate-400 mt-1 font-light">Methodology training includes a field day, not only a classroom.</p>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-white/[.04] p-4">
+                <h3 class="font-display font-semibold">A case study told <span class="italic">with</span>, not about</h3>
+                <p class="text-sm text-slate-400 mt-1 font-light">The host community's account, their words, their sign-off.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="reveal rounded-2xl border border-white/10 bg-white/[.04] p-8" style="transition-delay:.1s">
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <div class="font-display text-3xl font-bold">5</div>
+                  <div class="u-label text-[10px] text-slate-400 mt-1">Acres</div>
+                </div>
+                <div>
+                  <div class="font-display text-3xl font-bold">Mukono</div>
+                  <div class="u-label text-[10px] text-slate-400 mt-1">Uganda</div>
+                </div>
+              </div>
+              <div class="h-px bg-white/10 my-6"></div>
+              <p class="text-sm text-slate-300 font-light leading-relaxed">
+                Connected water, sanitation, energy, resource recovery and food systems, built, measured and
+                maintained under paid service contract.
+              </p>
+              <p class="text-xs text-slate-500 mt-4 font-light">
+                This section grows as systems are commissioned and baselines recorded. We would rather show
+                what is there than describe what is intended.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTOR ALIGNMENT ============ -->
+    <section id="alignment" class="py-24 lg:py-32">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="max-w-2xl">
+          <span class="reveal u-label text-[11px] text-primary">Sector alignment</span>
+          <h2 class="reveal font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+            Where our practice meets the continental agenda.
+          </h2>
+          <p class="reveal text-inksoft mt-4 leading-relaxed font-light" style="transition-delay:.1s">
+            Our model was built independently and maps directly onto the pillars set for Africa's systems
+            transformation in water and sanitation, with comparable alignments in energy access and the
+            circular economy.
+          </p>
+        </div>
+
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6">
+            <span class="u-label text-[10px] text-primary">Pillar 01</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">Leadership &amp; framing</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Convening, advocacy and the systems framing that connects delivery to policy, with our partner Common Ground Solutions Center.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.06s">
+            <span class="u-label text-[10px] text-primary">Pillar 02</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">Regulation &amp; accountability</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Measured baselines and published uptime, the performance data rural regulation currently lacks.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.12s">
+            <span class="u-label text-[10px] text-primary">Pillar 03</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">Professionalisation</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Certified makers, trained operators and engineers formed on site, so systems stay repairable within a day's travel.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.18s">
+            <span class="u-label text-[10px] text-primary">Pillar 04</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">Strategic public finance</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">A viability test before construction, so financial credibility is proven at project level, not assumed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRINCIPLES ============ -->
+    <section id="principles" class="py-24 lg:py-32 bg-surface2/60 border-y border-line/10">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="max-w-2xl">
+          <span class="reveal u-label text-[11px] text-primary">Operating principles</span>
+          <h2 class="reveal font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+            The 4Rs that make a solution succeed.
+          </h2>
+        </div>
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6">
+            <span class="font-display text-2xl font-bold text-primary">R1</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">The right ones</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Clarity of purpose, and minimum adverse impact on people and ecosystems.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.06s">
+            <span class="font-display text-2xl font-bold text-primary">R2</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">Rightly done</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Co-created with communities in ways that honour their knowledge and lived experience.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.12s">
+            <span class="font-display text-2xl font-bold text-primary">R3</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">For the right reasons</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Ethical intent and long-term thinking, not short-term expediency.</p>
+          </div>
+          <div class="reveal rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:.18s">
+            <span class="font-display text-2xl font-bold text-primary">R4</span>
+            <h3 class="font-display text-lg font-semibold text-ink mt-2">With the right mindset</h3>
+            <p class="text-sm text-inksoft mt-2 font-light leading-relaxed">Respectful of context and scale, and of what each community actually needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section id="partners" class="py-24 lg:py-32">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="max-w-2xl">
+          <span class="reveal u-label text-[11px] text-primary">Who we work with</span>
+          <h2 class="reveal font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-3" style="transition-delay:.05s">
+            Partners moving from commitment to delivery.
+          </h2>
+        </div>
+        <div id="partners-grid" class="mt-14 grid sm:grid-cols-2 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / CTA ============ -->
+    <section id="contact" class="py-24 lg:py-32 bg-surface2/60 border-t border-line/10">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="rounded-3xl bg-primary text-white p-10 sm:p-14 overflow-hidden relative">
+          <div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl"></div>
+          <div class="relative grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7">
+              <span class="u-label text-[11px] text-sky-100">Let's work together</span>
+              <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mt-3 leading-tight">
+                Come and see the site before you decide anything.
+              </h2>
+              <p class="text-sky-100/90 mt-4 font-light leading-relaxed max-w-xl">
+                We are not asking you to fund a concept. We are asking you to fund the next proof point,
+                using a model already being tested, with real data behind it. That invitation is the whole pitch.
+              </p>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="rounded-2xl bg-white/10 border border-white/15 p-6 backdrop-blur-sm">
+                <div class="u-label text-[10px] text-sky-100">Contact</div>
+                <p class="font-display text-lg font-semibold mt-2">Peter Nzabanita Sabiiti</p>
+                <p class="text-sm text-sky-100/85">CEO &amp; Founder, Regena Systems Africa Ltd</p>
+                <a href="mailto:peter.nzabanita@regenasystems.com" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-primary hover:bg-sky-50 transition-colors">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                  peter.nzabanita@regenasystems.com
+                </a>
+                <div class="h-px bg-white/15 my-4"></div>
+                <p class="text-xs text-sky-100/80 font-light">Mukono, Uganda · Reg. No. 80034892344510</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-line/10">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10 py-16">
+      <div class="grid gap-10 lg:grid-cols-12 border-b border-line/10 pb-12">
+        <div class="lg:col-span-5">
+          <div class="flex items-center gap-3">
+            <img src="assets/regena-logo.png" alt="Regena Systems Africa" class="h-11 w-11 object-contain" />
+            <div class="flex flex-col leading-none">
+              <span class="font-display font-bold text-ink tracking-tight">Regena Systems Africa Ltd</span>
+              <span class="u-label text-[8.5px] text-primary mt-1">Community Engineering · Uganda</span>
+            </div>
+          </div>
+          <p class="text-sm text-inksoft mt-5 font-light leading-relaxed max-w-sm">
+            Systems thinking, community engineering, and the discipline to stay until what we build is still working.
+          </p>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h4 class="u-label text-[10px] text-primary">What we build</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
+            <li><a href="#build" class="hover:text-ink transition-colors">Water &amp; sanitation</a></li>
+            <li><a href="#build" class="hover:text-ink transition-colors">Renewable energy</a></li>
+            <li><a href="#build" class="hover:text-ink transition-colors">Resource recovery</a></li>
+            <li><a href="#build" class="hover:text-ink transition-colors">Shelter &amp; food systems</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="u-label text-[10px] text-primary">The practice</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
+            <li><a href="#model" class="hover:text-ink transition-colors">The model</a></li>
+            <li><a href="#evidence" class="hover:text-ink transition-colors">Evidence</a></li>
+            <li><a href="#site" class="hover:text-ink transition-colors">The site</a></li>
+            <li><a href="#partners" class="hover:text-ink transition-colors">Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="u-label text-[10px] text-primary">Contact</h4>
+          <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
+            <li><a href="mailto:peter.nzabanita@regenasystems.com" class="hover:text-ink transition-colors break-all">peter.nzabanita@regenasystems.com</a></li>
+            <li>Mukono, Uganda</li>
+            <li>Reg. No. 80034892344510</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 text-xs text-inksoft font-light">
+        <span>© <span id="year"></span> Regena Systems Africa Ltd. All rights reserved.</span>
+        <span>In partnership with Common Ground Solutions Center, LLC.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---------- data-driven grids ----------
+    var icons = {
+      water: '<path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7Z"/>',
+      sanitation: '<path d="M6 12V5a2 2 0 0 1 2-2 2 2 0 0 1 2 2"/><path d="M4 12h16a1 1 0 0 1 1 1v1a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6v-1a1 1 0 0 1 1-1Z"/><path d="M7 20l-1 2M17 20l1 2"/>',
+      energy: '<path d="M4 13h6l-1 8 11-13h-7l1-6-11 11Z"/>',
+      recovery: '<path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/>',
+      shelter: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/>',
+      food: '<path d="M12 22V12"/><path d="M12 12c0-4 2-7 6-8 0 4-2 7-6 8Z"/><path d="M12 14c0-3-2-5-6-6 0 3 2 5 6 6Z"/>',
+      fabrication: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5Z"/>',
+      training: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/>',
+      gov: '<path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/>',
+      reg: '<path d="M12 3 4 6v6c0 5 3.4 8.5 8 9 4.6-.5 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>',
+      fin: '<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5a2.5 2 0 0 1 5 0c0 2.5-5 1.5-5 4a2.5 2 0 0 0 5 0"/>',
+      found: '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/>'
+    };
+    function svg(p) {
+      return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">' + p + '</svg>';
+    }
+
+    var build = [
+      ["water", "Water systems", "Boreholes, solar pumping, rainwater storage, distribution, and water quality."],
+      ["sanitation", "Sanitation", "Toilets, handwashing, faecal sludge handling and safe reuse."],
+      ["energy", "Renewable energy", "Solar generation, productive-use energy, efficiency and backup, with no tree cutting."],
+      ["recovery", "Resource recovery", "Organic waste into compost, protein feed and fuel briquettes."],
+      ["shelter", "Shelter &amp; construction", "Interlocking blocks pressed from local subsoil, with no firing and no trees."],
+      ["food", "Food systems", "Irrigation, livestock water, soil health and farm infrastructure."],
+      ["fabrication", "Fabrication", "Poultry systems, filters, dryers, stalls and tanks, made and repaired locally."],
+      ["training", "Training &amp; certification", "Masons, welders, technicians, operators and producers."]
+    ];
+    document.getElementById("build-grid").innerHTML = build.map(function (b, i) {
+      return '<div class="reveal card-hover group rounded-2xl bg-surface border border-line/10 p-6 hover:border-primary/30" style="transition-delay:' + (i % 4 * 0.05) + 's">' +
+        '<div class="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary border border-primary/15 mb-5">' + svg(icons[b[0]]) + '</div>' +
+        '<h3 class="font-display text-lg font-semibold text-ink">' + b[1] + '</h3>' +
+        '<p class="text-sm text-inksoft mt-2 font-light leading-relaxed">' + b[2] + '</p>' +
+        '</div>';
+    }).join("");
+
+    var partners = [
+      ["gov", "Governments &amp; public institutions", "Ministries, districts and utilities implementing reform in water, energy and rural services."],
+      ["reg", "Regulators", "Extending oversight into rural and small-town services, and needing the performance data to do it."],
+      ["fin", "Financiers &amp; DFIs", "Seeking investable, credible projects with evidence of continued operation after handover."],
+      ["found", "Foundations, NGOs &amp; communities", "Committed to results that outlast the funding cycle."]
+    ];
+    document.getElementById("partners-grid").innerHTML = partners.map(function (p, i) {
+      return '<div class="reveal flex gap-4 rounded-2xl bg-surface border border-line/10 p-6" style="transition-delay:' + (i % 2 * 0.06) + 's">' +
+        '<div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary border border-primary/15">' + svg(icons[p[0]]) + '</div>' +
+        '<div><h3 class="font-display text-lg font-semibold text-ink">' + p[1] + '</h3>' +
+        '<p class="text-sm text-inksoft mt-1.5 font-light leading-relaxed">' + p[2] + '</p></div>' +
+        '</div>';
+    }).join("");
+
+    // ---------- year ----------
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ---------- theme toggle ----------
+    document.getElementById("theme-toggle").addEventListener("click", function () {
+      var dark = document.documentElement.classList.toggle("dark");
+      try { localStorage.setItem("regena-theme", dark ? "dark" : "light"); } catch (e) {}
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", dark ? "#06131c" : "#f4f9fc");
+    });
+
+    // ---------- mobile menu ----------
+    var menuBtn = document.getElementById("menu-btn"),
+        menu = document.getElementById("mobile-menu"),
+        mo = document.getElementById("menu-open"),
+        mc = document.getElementById("menu-close");
+    menuBtn.addEventListener("click", function () {
+      var open = menu.classList.toggle("hidden") === false;
+      mo.classList.toggle("hidden", open);
+      mc.classList.toggle("hidden", !open);
+    });
+    document.querySelectorAll(".mob-link").forEach(function (l) {
+      l.addEventListener("click", function () {
+        menu.classList.add("hidden"); mo.classList.remove("hidden"); mc.classList.add("hidden");
+      });
+    });
+
+    // ---------- nav scroll state ----------
+    var navInner = document.getElementById("nav-inner");
+    function onScroll() {
+      if (window.scrollY > 24) navInner.classList.add("glass", "shadow-lg", "shadow-black/5");
+      else navInner.classList.remove("glass", "shadow-lg", "shadow-black/5");
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // ---------- scroll spy ----------
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll("[data-nav]"));
+    var spySections = navLinks.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+    function spy() {
+      var pos = window.scrollY + 160, idx = -1;
+      spySections.forEach(function (s, i) { if (s && s.offsetTop <= pos) idx = i; });
+      navLinks.forEach(function (a, i) { a.setAttribute("data-active", i === idx ? "true" : "false"); });
+    }
+    spy();
+    window.addEventListener("scroll", spy, { passive: true });
+
+    // ---------- reveal on view ----------
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+    // ---------- count up ----------
+    function countUp(el) {
+      var target = parseFloat(el.getAttribute("data-count")), dur = 1100, t0 = null;
+      function step(ts) {
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toString();
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { countUp(e.target); cio.unobserve(e.target); }
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll("[data-count]").forEach(function (el) { cio.observe(el); });
+
+    // ---------- image fallback ----------
+    ["hero-img", "site-img"].forEach(function (id) {
+      var img = document.getElementById(id);
+      if (!img) return;
+      img.addEventListener("error", function () {
+        img.style.display = "none";
+        img.parentElement.classList.add("img-fallback", "relative");
+      });
+    });
+  </script>
+</body>
+</html>
