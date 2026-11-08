@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.1
+
+- Navigation trimmed to Home, What we do, About and Contact (plus the Partner with us and Donate buttons). Evidence and Partnership are no longer in the menu but remain linked from the home page, the footer and other pages.
+- With four links the full menu fits from 1024px again, so the hamburger now only appears below that.
+
 ## v2.1.0
 
 Client feedback round.
