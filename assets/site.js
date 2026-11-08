@@ -108,7 +108,31 @@
     if (dlg && (e.target === dlg || (e.target.closest && e.target.closest("[data-close-dialog]")))) dlg.close();
   });
 
-  /* ---------- reveal on scroll ---------- */
+  /* ---------- fade up on scroll (every section) ---------- */
+  // Blocks that already carry .reveal keep their own markup. Anything else directly inside a
+  // section's container is tagged here, so no section appears without the effect.
+  var sections = doc.querySelectorAll("main > section");
+  sections.forEach(function (sec, si) {
+    if (sec.id === "home") return; // the hero has its own entrance animation
+    var wrap = sec.querySelector(":scope > .wrap");
+    var blocks = wrap ? wrap.children : sec.children;
+    Array.prototype.forEach.call(blocks, function (el, bi) {
+      if (si === 0) { // page header of an inner page: animate on load, no scrolling needed
+        el.classList.add("rise");
+        el.style.animationDelay = bi * 0.06 + "s";
+      } else if (!el.classList.contains("reveal") && !el.querySelector(".reveal")) {
+        el.classList.add("reveal");
+      }
+    });
+  });
+  // Stagger siblings a little so grids cascade instead of landing in one block.
+  var staggered = new Map();
+  doc.querySelectorAll(".reveal").forEach(function (el) {
+    if (el.style.transitionDelay) return;
+    var n = staggered.get(el.parentElement) || 0;
+    staggered.set(el.parentElement, n + 1);
+    el.style.transitionDelay = (n % 4) * 0.06 + "s";
+  });
   var reveals = doc.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -140,15 +164,15 @@
 
   /* ---------- misc ---------- */
   doc.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
-  if (cfg.phone) {
-    doc.querySelectorAll("[data-phone]").forEach(function (el) {
-      el.hidden = false;
-      var t = el.querySelector("[data-phone-text]");
-      if (t) t.textContent = cfg.phone;
-      var a = el.querySelector("a");
-      if (a) a.setAttribute("href", "tel:" + cfg.phone.replace(/[^\d+]/g, ""));
+  doc.querySelectorAll("select").forEach(function (sel) {
+    sel.addEventListener("change", function () {
+      var go = sel.options[sel.selectedIndex].getAttribute("data-goto");
+      if (go) window.location.href = go;
     });
-  }
+  });
+  window.addEventListener("pageshow", function () { // back button: do not leave "Donate" selected
+    doc.querySelectorAll("select").forEach(function (sel) { if (sel.selectedOptions[0] && sel.selectedOptions[0].getAttribute("data-goto")) sel.selectedIndex = 0; });
+  });
   doc.querySelectorAll("img[data-fallback]").forEach(function (img) {
     img.addEventListener("error", function () { img.style.display = "none"; img.parentElement.classList.add("img-fallback"); });
   });

@@ -37,7 +37,7 @@
 <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
 <header id="nav" class="fixed top-0 inset-x-0 z-50">
   <div class="wrap">
-    <div id="nav-inner" class="mt-3 flex items-center justify-between rounded-2xl px-3 sm:px-4 py-2.5">
+    <div id="nav-inner" class="mt-3 flex items-center justify-between gap-3 rounded-2xl px-3 sm:px-4 py-2.5">
       <a href="index.html" class="flex items-center gap-2.5 shrink-0" aria-label="Regena Systems Africa, home">
         <img src="assets/regena-logo.png" alt="" class="h-10 w-10 object-contain" />
         <span class="flex flex-col leading-none">
@@ -46,12 +46,13 @@
         </span>
       </a>
 
-      <nav class="hidden lg:flex items-center" aria-label="Primary">
-        <a href="what-we-do.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">What we do</a>
-        <a href="evidence.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Evidence</a>
-        <a href="about.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">About</a>
-        <a href="partnership.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Partnership</a>
-        <a href="contact.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
+      <nav class="hidden xl:flex items-center" aria-label="Primary">
+        <a href="index.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Home</a>
+        <a href="what-we-do.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">What we do</a>
+        <a href="evidence.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Evidence</a>
+        <a href="about.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">About</a>
+        <a href="partnership.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Partnership</a>
+        <a href="contact.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
@@ -60,23 +61,26 @@
           <svg class="h-[18px] w-[18px] hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="h-[18px] w-[18px] block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
-        <a href="partner.html" data-open-partner class="btn btn-primary btn-sm hidden md:inline-flex">
-          Partner with us
-        </a>
-        <button id="menu-btn" type="button" class="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <a href="partner.html" data-open-partner class="btn btn-ghost btn-sm hidden md:inline-flex">Partner with us</a>
+        <a href="donate.html" class="btn btn-primary btn-sm hidden md:inline-flex">Donate</a>
+        <button id="menu-btn" type="button" class="xl:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg id="menu-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="menu-close" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden hidden mt-2 rounded-2xl glass p-2">
+    <div id="mobile-menu" class="xl:hidden hidden mt-2 rounded-2xl glass p-2">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Home</a>
       <a href="what-we-do.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">What we do</a>
       <a href="evidence.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Evidence</a>
       <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">About</a>
       <a href="partnership.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Partnership</a>
       <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Contact</a>
-      <a href="partner.html" data-open-partner class="btn btn-primary w-full mt-2">Partner with us</a>
+      <div class="grid grid-cols-2 gap-2 mt-2">
+        <a href="partner.html" data-open-partner class="btn btn-ghost">Partner with us</a>
+        <a href="donate.html" class="btn btn-primary">Donate</a>
+      </div>
     </div>
   </div>
 </header>
@@ -245,9 +249,9 @@
   <div class="dialog-panel">
     <div class="flex items-start justify-between gap-4">
       <div>
-        <p class="eyebrow">Partner or donate</p>
-        <h2 id="partner-dialog-title" class="font-display text-2xl font-bold text-ink mt-2 tracking-tight">Help fund the next proof point</h2>
-        <p class="soft mt-2">Tell us how you would like to help. We reply personally with the next steps.</p>
+        <p class="eyebrow">Partner with us</p>
+        <h2 id="partner-dialog-title" class="font-display text-2xl font-bold text-ink mt-2 tracking-tight">Let's work together</h2>
+        <p class="soft mt-2">Tell us how you would like to partner. We reply personally with the next steps. To give, <a href="donate.html" class="text-primary font-medium underline underline-offset-4">go to the donate page</a>.</p>
       </div>
       <button type="button" data-close-dialog aria-label="Close" class="h-9 w-9 shrink-0 grid place-items-center rounded-xl border border-line/15 text-ink hover:bg-primary/10">
         <span data-icon="close" class="h-5 w-5"></span>
@@ -256,16 +260,15 @@
     <div class="mt-6">
       <form class="space-y-4" data-form="partner" novalidate>
   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px] h-0 w-0 opacity-0" />
-  <input type="hidden" name="form_type" value="Partner or donate" />
+  <input type="hidden" name="form_type" value="Partner" />
   <div class="grid sm:grid-cols-2 gap-4">
     <label class="block"><span class="label">Full name</span><input class="field" type="text" name="from_name" required autocomplete="name" placeholder="Your name" /></label>
     <label class="block"><span class="label">Email</span><input class="field" type="email" name="from_email" required autocomplete="email" placeholder="you@organisation.org" /></label>
   </div>
   <div class="grid sm:grid-cols-2 gap-4">
     <label class="block"><span class="label">Organisation <small>(optional)</small></span><input class="field" type="text" name="organisation" autocomplete="organization" placeholder="Foundation, agency, company" /></label>
-    <label class="block"><span class="label">How would you like to help?</span>
+    <label class="block"><span class="label">How would you like to partner?</span>
       <select class="field" name="interest" required>
-        <option value="Make a donation">Make a donation</option>
         <option value="Fund the next proof point">Fund the next proof point</option>
         <option value="Technical or research partnership">Technical or research partnership</option>
         <option value="Visit the site">Visit the site</option>
@@ -274,16 +277,12 @@
       </select>
     </label>
   </div>
-  <label class="block"><span class="label">Indicative amount, USD <small>(optional)</small></span><input class="field" type="text" name="amount" inputmode="decimal" placeholder="e.g. 500" /></label>
   <label class="block"><span class="label">Message</span><textarea class="field" name="message" required placeholder="Tell us a little about what you have in mind."></textarea></label>
   <label class="flex items-start gap-3 text-[13px] text-inksoft font-light leading-snug">
     <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 accent-[rgb(11,122,184)]" />
     <span>I agree that Regena Systems Africa Ltd may contact me about this message.</span>
   </label>
-  <div class="flex flex-wrap items-center gap-4">
-    <button type="submit" class="btn btn-primary">Send message</button>
-    <span class="text-xs text-inksoft font-light">No payment details are collected here.</span>
-  </div>
+  <button type="submit" class="btn btn-primary">Send message</button>
   <p data-status role="status" aria-live="polite" hidden></p>
 </form>
     </div>
@@ -303,12 +302,16 @@
           </div>
         </div>
         <p class="soft mt-5 max-w-sm">Systems thinking, community engineering, and the discipline to stay until what we build is still working.</p>
-        <a href="partner.html" data-open-partner class="btn btn-primary btn-sm mt-6">Partner with us</a>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <a href="donate.html" class="btn btn-primary btn-sm">Donate</a>
+          <a href="partner.html" data-open-partner class="btn btn-ghost btn-sm">Partner with us</a>
+        </div>
       </div>
 
       <div class="lg:col-span-2">
         <h4 class="eyebrow">Explore</h4>
         <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
+          <li><a href="index.html" class="hover:text-ink">Home</a></li>
           <li><a href="what-we-do.html" class="hover:text-ink">What we do</a></li>
           <li><a href="evidence.html" class="hover:text-ink">Evidence</a></li>
           <li><a href="about.html" class="hover:text-ink">About</a></li>
@@ -319,7 +322,8 @@
       <div class="lg:col-span-2">
         <h4 class="eyebrow">Get involved</h4>
         <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
-          <li><a href="partner.html" class="hover:text-ink">Partner or donate</a></li>
+          <li><a href="donate.html" class="hover:text-ink">Donate</a></li>
+          <li><a href="partner.html" class="hover:text-ink">Partner with us</a></li>
           <li><a href="contact.html" class="hover:text-ink">Contact</a></li>
           <li><a href="contact.html#visit" class="hover:text-ink">Plan a site visit</a></li>
         </ul>
@@ -327,10 +331,10 @@
 
       <div class="lg:col-span-3">
         <h4 class="eyebrow">Contact</h4>
-        <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
-          <li><a href="mailto:peter.nzabanita@regenasystems.com" class="hover:text-ink break-all">peter.nzabanita@regenasystems.com</a></li>
-          <li>Mukono, Uganda</li>
-          <li>Reg. No. 80034892344510</li>
+        <ul class="mt-4 space-y-3 text-sm text-inksoft font-light">
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="pin"></span><span>Kampala, Uganda</span></li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="mail"></span><a href="mailto:peter.nzabanita@gmail.com" class="hover:text-ink break-all">peter.nzabanita@gmail.com</a></li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="phone"></span><a href="tel:+256784290258" class="hover:text-ink">+256-784290258</a></li>
         </ul>
       </div>
     </div>

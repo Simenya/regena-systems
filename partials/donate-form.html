@@ -1,0 +1,55 @@
+<form class="space-y-5" data-form="donate" novalidate>
+  <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px] h-0 w-0 opacity-0" />
+  <input type="hidden" name="form_type" value="Donate" />
+
+  <fieldset>
+    <legend class="label">Choose an amount, USD</legend>
+    <div class="flex flex-wrap gap-2" role="group" aria-label="Suggested amounts">
+      <button type="button" class="chip" data-amount="25" aria-pressed="false">$25</button>
+      <button type="button" class="chip" data-amount="50" aria-pressed="false">$50</button>
+      <button type="button" class="chip" data-amount="100" aria-pressed="false">$100</button>
+      <button type="button" class="chip" data-amount="250" aria-pressed="false">$250</button>
+      <button type="button" class="chip" data-amount="500" aria-pressed="false">$500</button>
+    </div>
+  </fieldset>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    <label class="block"><span class="label">Amount, USD</span><input class="field" type="number" name="amount" min="1" step="any" inputmode="decimal" required placeholder="Or enter your own" /></label>
+    <label class="block"><span class="label">How often?</span>
+      <select class="field" name="frequency" required>
+        <option value="One-time">One-time</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Yearly">Yearly</option>
+      </select>
+    </label>
+  </div>
+
+  <label class="block"><span class="label">Where should it go?</span>
+    <select class="field" name="purpose">
+      <option value="Where it is needed most">Where it is needed most</option>
+      <option value="The next proof point">The next proof point</option>
+      <option value="Training and certification">Training and certification</option>
+      <option value="Water and sanitation">Water and sanitation</option>
+      <option value="Renewable energy and resource recovery">Renewable energy and resource recovery</option>
+      <option value="Shelter and food systems">Shelter and food systems</option>
+    </select>
+  </label>
+
+  <div class="grid sm:grid-cols-2 gap-4">
+    <label class="block"><span class="label">Full name</span><input class="field" type="text" name="from_name" required autocomplete="name" placeholder="Your name" /></label>
+    <label class="block"><span class="label">Email</span><input class="field" type="email" name="from_email" required autocomplete="email" placeholder="you@example.org" /></label>
+  </div>
+  <label class="block"><span class="label">Organisation <small>(optional)</small></span><input class="field" type="text" name="organisation" autocomplete="organization" placeholder="Foundation, company or group" /></label>
+  <label class="block"><span class="label">Message <small>(optional)</small></span><textarea class="field" name="message" placeholder="Anything you would like us to know."></textarea></label>
+
+  <label class="flex items-start gap-3 text-[13px] text-inksoft font-light leading-snug">
+    <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 accent-[rgb(11,122,184)]" />
+    <span>I agree that Regena Systems Africa Ltd may contact me about my gift.</span>
+  </label>
+
+  <div class="flex flex-wrap items-center gap-4">
+    <button type="submit" class="btn btn-primary">Pledge my gift</button>
+    <span class="text-xs text-inksoft font-light">No payment details are collected here.</span>
+  </div>
+  <p data-status role="status" aria-live="polite" hidden></p>
+</form>

@@ -104,8 +104,15 @@ html.js .reveal.in { opacity: 1; transform: none; }
 body.has-hero #nav-inner:not(.glass) .nav-wordmark { color: #fff; }
 body.has-hero #nav-inner:not(.glass) [data-nav] { color: rgba(255,255,255,.75); }
 body.has-hero #nav-inner:not(.glass) [data-nav]:hover { color: #fff; }
+body.has-hero #nav-inner:not(.glass) .btn-ghost { color: #fff; border-color: rgba(255,255,255,.35); }
 body.has-hero #nav-inner:not(.glass) #theme-toggle,
 body.has-hero #nav-inner:not(.glass) #menu-btn { color: #fff; border-color: rgba(255,255,255,.28); }
+
+/* amount chips (donate page) */
+.chip { border-radius: .75rem; border: 1px solid rgb(var(--c-line) / .22); background: rgb(var(--c-surface)); color: rgb(var(--c-ink)); padding: .55rem 1.1rem; font-size: .9rem; font-weight: 600; cursor: pointer; }
+.chip:hover { border-color: rgb(var(--c-primary)); }
+.chip[aria-pressed="true"] { background: rgb(var(--c-primary)); border-color: rgb(var(--c-primary)); color: #fff; }
+.dark .chip[aria-pressed="true"] { color: #04202e; }
 
 /* forms */
 .label { display: block; font-size: .78rem; font-weight: 600; color: rgb(var(--c-ink)); margin-bottom: .35rem; }

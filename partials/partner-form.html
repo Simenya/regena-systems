@@ -1,15 +1,14 @@
 <form class="space-y-4" data-form="partner" novalidate>
   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px] h-0 w-0 opacity-0" />
-  <input type="hidden" name="form_type" value="Partner or donate" />
+  <input type="hidden" name="form_type" value="Partner" />
   <div class="grid sm:grid-cols-2 gap-4">
     <label class="block"><span class="label">Full name</span><input class="field" type="text" name="from_name" required autocomplete="name" placeholder="Your name" /></label>
     <label class="block"><span class="label">Email</span><input class="field" type="email" name="from_email" required autocomplete="email" placeholder="you@organisation.org" /></label>
   </div>
   <div class="grid sm:grid-cols-2 gap-4">
     <label class="block"><span class="label">Organisation <small>(optional)</small></span><input class="field" type="text" name="organisation" autocomplete="organization" placeholder="Foundation, agency, company" /></label>
-    <label class="block"><span class="label">How would you like to help?</span>
+    <label class="block"><span class="label">How would you like to partner?</span>
       <select class="field" name="interest" required>
-        <option value="Make a donation">Make a donation</option>
         <option value="Fund the next proof point">Fund the next proof point</option>
         <option value="Technical or research partnership">Technical or research partnership</option>
         <option value="Visit the site">Visit the site</option>
@@ -18,15 +17,11 @@
       </select>
     </label>
   </div>
-  <label class="block"><span class="label">Indicative amount, USD <small>(optional)</small></span><input class="field" type="text" name="amount" inputmode="decimal" placeholder="e.g. 500" /></label>
   <label class="block"><span class="label">Message</span><textarea class="field" name="message" required placeholder="Tell us a little about what you have in mind."></textarea></label>
   <label class="flex items-start gap-3 text-[13px] text-inksoft font-light leading-snug">
     <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 accent-[rgb(11,122,184)]" />
     <span>I agree that Regena Systems Africa Ltd may contact me about this message.</span>
   </label>
-  <div class="flex flex-wrap items-center gap-4">
-    <button type="submit" class="btn btn-primary">Send message</button>
-    <span class="text-xs text-inksoft font-light">No payment details are collected here.</span>
-  </div>
+  <button type="submit" class="btn btn-primary">Send message</button>
   <p data-status role="status" aria-live="polite" hidden></p>
 </form>

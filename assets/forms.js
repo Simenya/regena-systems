@@ -47,7 +47,8 @@
     var skip = { page: 1, form_kind: 1, sent_at: 1, reply_to: 1, consent: 1 };
     var lines = Object.keys(params).filter(function (k) { return !skip[k] && params[k]; })
       .map(function (k) { return k.replace(/_/g, " ") + ": " + params[k]; });
-    var subject = (kind === "partner" ? "Partnership or donation enquiry" : "Website enquiry") + " from " + (params.from_name || "a visitor");
+    var titles = { partner: "Partnership enquiry", donate: "Donation pledge", contact: "Website enquiry" };
+    var subject = (titles[kind] || "Website enquiry") + " from " + (params.from_name || "a visitor");
     return "mailto:" + (cfg.toEmail || "") + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
   }
 
@@ -58,6 +59,22 @@
       return Math.max(0, Math.ceil((last + wait - Date.now()) / 1000));
     } catch (e) { return 0; }
   }
+
+  // Suggested amount chips on the donate form fill the amount field.
+  document.addEventListener("click", function (e) {
+    var chip = e.target.closest ? e.target.closest("[data-amount]") : null;
+    if (!chip) return;
+    var form = chip.closest("form");
+    form.elements.amount.value = chip.getAttribute("data-amount");
+    form.querySelectorAll("[data-amount]").forEach(function (c) { c.setAttribute("aria-pressed", c === chip ? "true" : "false"); });
+  });
+  document.addEventListener("input", function (e) {
+    if (e.target && e.target.name === "amount") {
+      e.target.closest("form").querySelectorAll("[data-amount]").forEach(function (c) {
+        c.setAttribute("aria-pressed", c.getAttribute("data-amount") === e.target.value ? "true" : "false");
+      });
+    }
+  });
 
   document.addEventListener("submit", function (e) {
     var form = e.target.closest ? e.target.closest("form[data-form]") : null;
@@ -99,6 +116,7 @@
         var name = params.from_name ? ", " + params.from_name.split(" ")[0] : "";
         status(form, "ok", "Thank you" + name + ". Your message has been sent and we will reply soon.");
         form.reset();
+        form.querySelectorAll("[data-amount]").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
       })
       .catch(function (err) {
         console.error("[Regena] EmailJS send failed", err);
