@@ -74,6 +74,7 @@ See `CHANGELOG.md` for what changed.
 ## Before going live
 
 - Replace the Tailwind Play CDN with a compiled stylesheet (the CDN prints a console warning and compiles in the browser).
-- Replace the two Unsplash photos (home hero and the Nakifuuma band) with licensed or owned photography. Each has a gradient fallback.
+- The home hero photo (`assets/hero-irrigation.jpg`) was supplied by the client: confirm they own or are licensed to use it. The Nakifuuma band on `evidence.html` still hot-links an Unsplash photo, so replace it with licensed or owned photography. Both have a gradient fallback.
+- Set `virtualTourUrl` in `assets/config.js` to make the home page "Virtual Tour" button open a video or 360 tour. Until then it leads to the site visit section.
 - Add `sitemap.xml`, `robots.txt` and a canonical URL once the domain is known, and a 1200 by 630 share image for `og:image`.
 - Confirm the logo (taken from the CGSC and Regena overview deck) and the contact details with the client.

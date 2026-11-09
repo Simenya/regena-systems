@@ -16,6 +16,9 @@
 */
 window.REGENA_CONFIG = {
   toEmail: "peter.nzabanita@gmail.com",
+  // Paste a video or 360 tour link (YouTube, Vimeo, Matterport...) to make the home page
+  // "Virtual Tour" button open it. While empty, the button leads to the site visit section.
+  virtualTourUrl: "",
   cooldownSeconds: 30, // minimum gap between two sends from the same browser
   emailjs: {
     publicKey: "",

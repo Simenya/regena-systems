@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.2.0
+
+- Home hero: new background photo (irrigation sprinkler on young crops, `assets/hero-irrigation.jpg`, served locally instead of hot-linked).
+- Home hero headline is now the tagline "WATER. SANITATION. RENEWABLE ENERGY. FOOD SYSTEMS". The supporting sentence is kept and the small systems line was removed, since the tagline replaces it.
+- Hero buttons: "Learn more" (blue, scrolls to Why Regena) and "Virtual Tour" (outlined). `virtualTourUrl` in `assets/config.js` sets where Virtual Tour goes; until set it leads to the site visit section.
+- Extra darkening and a shifted crop on phones so the tagline stays readable over the photo.
+
 ## v2.1.1
 
 - Navigation trimmed to Home, What we do, About and Contact (plus the Partner with us and Donate buttons). Evidence and Partnership are no longer in the menu but remain linked from the home page, the footer and other pages.

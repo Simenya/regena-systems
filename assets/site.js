@@ -27,6 +27,7 @@
     eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
     gift: '<path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/>',
     arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    play: '<circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4V8Z"/>',
     check: '<path d="M20 6 9 17l-5-5"/>',
     mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
     pin: '<path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/>',
@@ -173,6 +174,9 @@
   window.addEventListener("pageshow", function () { // back button: do not leave "Donate" selected
     doc.querySelectorAll("select").forEach(function (sel) { if (sel.selectedOptions[0] && sel.selectedOptions[0].getAttribute("data-goto")) sel.selectedIndex = 0; });
   });
+  if (cfg.virtualTourUrl) { // once a tour link is set in config.js, the Virtual Tour button opens it
+    doc.querySelectorAll("[data-virtual-tour]").forEach(function (a) { a.href = cfg.virtualTourUrl; a.target = "_blank"; a.rel = "noopener"; });
+  }
   doc.querySelectorAll("img[data-fallback]").forEach(function (img) {
     img.addEventListener("error", function () { img.style.display = "none"; img.parentElement.classList.add("img-fallback"); });
   });
