@@ -59,6 +59,10 @@ Built in: required-field validation, a hidden honeypot field, a 30 second cooldo
 
 The donate form is a pledge. It collects no payment details. To take card or mobile money payments later, add a payment provider and link to it from `donate.html`.
 
+## Deploy (GitHub Pages)
+
+The repo is `Simenya/regena-systems`. To publish: repo **Settings**, **Pages**, Source **Deploy from a branch**, Branch **main**, folder **/ (root)**, **Save**. The site then appears at https://simenya.github.io/regena-systems/ within a minute or two. All links are relative and `.nojekyll` is included, so it works from that sub-path. Every push to `main` redeploys.
+
 ## Versions
 
 Versions are git tags. Switch between them with:
