@@ -61,7 +61,9 @@ The donate form is a pledge. It collects no payment details. To take card or mob
 
 ## Deploy (GitHub Pages)
 
-The repo is `Simenya/regena-systems`. To publish: repo **Settings**, **Pages**, Source **Deploy from a branch**, Branch **main**, folder **/ (root)**, **Save**. The site then appears at https://simenya.github.io/regena-systems/ within a minute or two. All links are relative and `.nojekyll` is included, so it works from that sub-path. Every push to `main` redeploys.
+Live site: https://simenya.github.io/regena-systems/
+
+The repo is `Simenya/regena-systems`. A GitHub Actions workflow (`.github/workflows/pages.yml`) publishes the site on every push to `main`. It copies only the `*.html` files and `assets/` into the published site, so the README, partials and tools are not exposed. In the repo, **Settings**, **Pages**, **Source** must be set to **GitHub Actions**. You can also run it by hand from the **Actions** tab ("Run workflow"). All links are relative, so the site works from the `/regena-systems/` sub-path.
 
 ## Versions
 
