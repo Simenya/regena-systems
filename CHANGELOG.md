@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.2.1
+
+- Home hero: the headline "Engineering that stays until what we build is still working." is back as the main text. The tagline "WATER. SANITATION. RENEWABLE ENERGY. FOOD SYSTEMS" now sits directly under it as the supporting line.
+- Home Partnership section: the partner name, Common Ground Solutions Center, LLC, is bold.
+
 ## v2.2.0
 
 - Home hero: new background photo (irrigation sprinkler on young crops, `assets/hero-irrigation.jpg`, served locally instead of hot-linked).
