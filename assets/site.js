@@ -89,8 +89,37 @@
   /* ---------- active nav link ---------- */
   function norm(s) { s = (s || "").split("#")[0].split("?")[0]; s = s.replace(/\.html$/, ""); return s === "" ? "index" : s; }
   var here = norm(location.pathname.split("/").pop());
-  doc.querySelectorAll("[data-nav]").forEach(function (a) {
+  doc.querySelectorAll("a[data-nav]").forEach(function (a) {
     if (norm(a.getAttribute("href")) === here) { a.setAttribute("data-active", "true"); a.setAttribute("aria-current", "page"); }
+  });
+
+  /* ---------- nav dropdowns ---------- */
+  doc.querySelectorAll("[data-match]").forEach(function (b) {
+    if (b.getAttribute("data-match").split(" ").indexOf(here) !== -1) b.setAttribute("data-active", "true");
+  });
+  var dds = doc.querySelectorAll("[data-dd]");
+  function closeDds(except) {
+    dds.forEach(function (d) {
+      if (d === except) return;
+      d.classList.remove("open");
+      var b = d.querySelector(".nav-dd-btn"); if (b) b.setAttribute("aria-expanded", "false");
+    });
+  }
+  dds.forEach(function (d) {
+    var b = d.querySelector(".nav-dd-btn");
+    b.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = !d.classList.contains("open");
+      closeDds(d);
+      d.classList.toggle("open", open);
+      b.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    d.addEventListener("focusout", function (e) { if (!d.contains(e.relatedTarget)) { d.classList.remove("open"); b.setAttribute("aria-expanded", "false"); } });
+    d.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { closeDds(); }); });
+  });
+  doc.addEventListener("click", function () { closeDds(); });
+  doc.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { var o = doc.querySelector("[data-dd].open .nav-dd-btn"); closeDds(); if (o) o.focus(); }
   });
 
   /* ---------- work-with-us dialog ---------- */

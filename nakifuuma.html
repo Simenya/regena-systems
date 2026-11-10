@@ -46,14 +46,36 @@
         </span>
       </a>
 
-      <nav class="hidden xl:flex items-center" aria-label="Primary">
-        <a href="index.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Home</a>
-        <a href="what-we-do.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">What we do</a>
-        <a href="nakifuuma.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Nakifuuma</a>
-        <a href="who-its-for.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Who it&rsquo;s for</a>
-        <a href="about.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">About</a>
-        <a href="partnership.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Partnership</a>
-        <a href="contact.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+        <a href="index.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Home</a>
+
+        <div class="nav-dd" data-dd>
+          <button type="button" class="nav-dd-btn link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink" aria-haspopup="true" aria-expanded="false" data-match="what-we-do who-its-for">
+            What we do
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dd-panel">
+            <a href="what-we-do.html"><span class="t">What we do</span><span class="d">Six systems, the viability test, operators</span></a>
+            <a href="who-its-for.html"><span class="t">Who it&rsquo;s for</span><span class="d">Funders, communities, students, researchers</span></a>
+          </div>
+        </div>
+
+        <a href="nakifuuma.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Nakifuuma</a>
+
+        <div class="nav-dd" data-dd>
+          <button type="button" class="nav-dd-btn link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink" aria-haspopup="true" aria-expanded="false" data-match="about partnership">
+            About
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dd-panel">
+            <a href="about.html"><span class="t">About Regena</span><span class="d">Why we exist and the 4Rs</span></a>
+            <a href="about.html#leadership"><span class="t">Leadership</span><span class="d">The two directors</span></a>
+            <a href="about.html#roles"><span class="t">Roles and interests</span><span class="d">Where else our directors serve</span></a>
+            <a href="partnership.html"><span class="t">Partnership</span><span class="d">With Common Ground Solutions Center</span></a>
+          </div>
+        </div>
+
+        <a href="contact.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
@@ -64,20 +86,28 @@
         </button>
         <a href="back-a-project.html" class="btn btn-ghost btn-sm hidden md:inline-flex">Back a project</a>
         <a href="work-with-us.html" data-open-partner class="btn btn-amber btn-sm hidden md:inline-flex">Work with us</a>
-        <button id="menu-btn" type="button" class="xl:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button id="menu-btn" type="button" class="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg id="menu-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="menu-close" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="xl:hidden hidden mt-2 rounded-2xl glass p-2">
+    <div id="mobile-menu" class="lg:hidden hidden mt-2 rounded-2xl glass p-2 max-h-[80vh] overflow-auto">
       <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Home</a>
-      <a href="what-we-do.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">What we do</a>
+      <details class="mob-group">
+        <summary>What we do</summary>
+        <a href="what-we-do.html">What we do</a>
+        <a href="who-its-for.html">Who it&rsquo;s for</a>
+      </details>
       <a href="nakifuuma.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Nakifuuma</a>
-      <a href="who-its-for.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Who it&rsquo;s for</a>
-      <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">About</a>
-      <a href="partnership.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Partnership</a>
+      <details class="mob-group">
+        <summary>About</summary>
+        <a href="about.html">About Regena</a>
+        <a href="about.html#leadership">Leadership</a>
+        <a href="about.html#roles">Roles and interests</a>
+        <a href="partnership.html">Partnership</a>
+      </details>
       <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Contact</a>
       <div class="grid grid-cols-2 gap-2 mt-2">
         <a href="back-a-project.html" class="btn btn-ghost">Back a project</a>
@@ -117,7 +147,7 @@
 
   <section id="measure" class="section">
     <div class="wrap">
-      <div class="max-w-2xl"><p class="eyebrow reveal">How we measure</p><h2 class="h2 mt-3 reveal">Service measures and circular measures, published together</h2></div>
+      <div class="max-w-2xl"><p class="eyebrow reveal">How we measure</p><h2 class="h2 mt-3 reveal">Service measures and circular measures, published together</h2><p class="lead mt-4 reveal">We measure what a customer experiences and what the circular model earns, and we publish both. Service measures show whether it works. Circular measures show whether it pays.</p></div>
       <p class="u-label text-[11px] text-primary mt-12 reveal">Service</p>
       <div class="mt-4 grid gap-px rounded-2xl overflow-hidden border border-line/10 bg-line/10 md:grid-cols-3"><div class="reveal bg-bg p-8"><div class="flex items-center gap-3"><span class="icon-box"><span data-icon="clipboard"></span></span><h3 class="h3">Commissioning baseline</h3></div><p class="soft mt-3">Flow, quality, energy and output on the day of handover.</p></div><div class="reveal bg-bg p-8"><div class="flex items-center gap-3"><span class="icon-box"><span data-icon="pulse"></span></span><h3 class="h3">Service log</h3></div><p class="soft mt-3">Every visit and fault, with response time and downtime hours.</p></div><div class="reveal bg-bg p-8"><div class="flex items-center gap-3"><span class="icon-box"><span data-icon="bars"></span></span><h3 class="h3">Published uptime</h3></div><p class="soft mt-3">Against a 95% target, reported twice a year.</p></div></div>
       <p class="u-label text-[11px] text-amber mt-10 reveal">Circular</p>
@@ -128,7 +158,7 @@
 
   <section id="fit" class="section bg-surface2/50 border-y border-line/10">
     <div class="wrap">
-      <div class="max-w-2xl"><p class="eyebrow reveal">Where we fit</p><h2 class="h2 mt-3 reveal">Built for Uganda’s move from a linear to a circular economy</h2></div>
+      <div class="max-w-2xl"><p class="eyebrow reveal">Where we fit</p><h2 class="h2 mt-3 reveal">Built for Uganda’s move from a linear to a circular economy</h2><p class="lead mt-4 reveal">National plans in Uganda point towards a circular economy. Our work at Nakifuuma is built to line up with them, and to supply the field data behind them.</p></div>
       <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><div class="card card-hover reveal" style="transition-delay:0.0s"><p class="eyebrow">01</p><h3 class="h3 mt-3">Uganda NDP IV, 2025/26 to 2029/30</h3><p class="soft mt-2">Sets industrialisation and household income as priorities and includes promotion of the circular economy.</p></div><div class="card card-hover reveal" style="transition-delay:0.05s"><p class="eyebrow">02</p><h3 class="h3 mt-3">Uganda Circular Economy Roadmap</h3><p class="soft mt-2">A national process led by the Ministry of Trade, Industry and Cooperatives, backed by the African Development Bank’s Africa Circular Economy Facility.</p></div><div class="card card-hover reveal" style="transition-delay:0.1s"><p class="eyebrow">03</p><h3 class="h3 mt-3">Uganda Green Growth Development Strategy (2017)</h3><p class="soft mt-2">The national frame for low-carbon, resource-efficient growth that the roadmap builds on.</p></div><div class="card card-hover reveal" style="transition-delay:0.15000000000000002s"><p class="eyebrow">04</p><h3 class="h3 mt-3">Africa Circular Economy Facility and Alliance</h3><p class="soft mt-2">The African Development Bank’s dedicated trust fund for circular economy innovation, and the government-led alliance it supports.</p></div></div>
       <p class="soft mt-8 reveal">Also contributes to Sustainable Development Goals 2, 6, 7, 12 and 13.</p>
       <p class="soft mt-3 reveal">Sources:

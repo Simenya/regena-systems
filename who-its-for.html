@@ -46,14 +46,36 @@
         </span>
       </a>
 
-      <nav class="hidden xl:flex items-center" aria-label="Primary">
-        <a href="index.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Home</a>
-        <a href="what-we-do.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">What we do</a>
-        <a href="nakifuuma.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Nakifuuma</a>
-        <a href="who-its-for.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Who it&rsquo;s for</a>
-        <a href="about.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">About</a>
-        <a href="partnership.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Partnership</a>
-        <a href="contact.html" data-nav class="link-underline px-2 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+        <a href="index.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Home</a>
+
+        <div class="nav-dd" data-dd>
+          <button type="button" class="nav-dd-btn link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink" aria-haspopup="true" aria-expanded="false" data-match="what-we-do who-its-for">
+            What we do
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dd-panel">
+            <a href="what-we-do.html"><span class="t">What we do</span><span class="d">Six systems, the viability test, operators</span></a>
+            <a href="who-its-for.html"><span class="t">Who it&rsquo;s for</span><span class="d">Funders, communities, students, researchers</span></a>
+          </div>
+        </div>
+
+        <a href="nakifuuma.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Nakifuuma</a>
+
+        <div class="nav-dd" data-dd>
+          <button type="button" class="nav-dd-btn link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink" aria-haspopup="true" aria-expanded="false" data-match="about partnership">
+            About
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dd-panel">
+            <a href="about.html"><span class="t">About Regena</span><span class="d">Why we exist and the 4Rs</span></a>
+            <a href="about.html#leadership"><span class="t">Leadership</span><span class="d">The two directors</span></a>
+            <a href="about.html#roles"><span class="t">Roles and interests</span><span class="d">Where else our directors serve</span></a>
+            <a href="partnership.html"><span class="t">Partnership</span><span class="d">With Common Ground Solutions Center</span></a>
+          </div>
+        </div>
+
+        <a href="contact.html" data-nav class="link-underline px-3 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
@@ -64,20 +86,28 @@
         </button>
         <a href="back-a-project.html" class="btn btn-ghost btn-sm hidden md:inline-flex">Back a project</a>
         <a href="work-with-us.html" data-open-partner class="btn btn-amber btn-sm hidden md:inline-flex">Work with us</a>
-        <button id="menu-btn" type="button" class="xl:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button id="menu-btn" type="button" class="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg id="menu-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="menu-close" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="xl:hidden hidden mt-2 rounded-2xl glass p-2">
+    <div id="mobile-menu" class="lg:hidden hidden mt-2 rounded-2xl glass p-2 max-h-[80vh] overflow-auto">
       <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Home</a>
-      <a href="what-we-do.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">What we do</a>
+      <details class="mob-group">
+        <summary>What we do</summary>
+        <a href="what-we-do.html">What we do</a>
+        <a href="who-its-for.html">Who it&rsquo;s for</a>
+      </details>
       <a href="nakifuuma.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Nakifuuma</a>
-      <a href="who-its-for.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Who it&rsquo;s for</a>
-      <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">About</a>
-      <a href="partnership.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Partnership</a>
+      <details class="mob-group">
+        <summary>About</summary>
+        <a href="about.html">About Regena</a>
+        <a href="about.html#leadership">Leadership</a>
+        <a href="about.html#roles">Roles and interests</a>
+        <a href="partnership.html">Partnership</a>
+      </details>
       <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Contact</a>
       <div class="grid grid-cols-2 gap-2 mt-2">
         <a href="back-a-project.html" class="btn btn-ghost">Back a project</a>

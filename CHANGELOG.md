@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.2.0
+
+- Cleaner menu: Home, What we do (dropdown: What we do, Who it's for), Nakifuuma, About (dropdown: About Regena, Leadership, Roles and interests, Partnership), Contact, plus the Back a project and Work with us buttons. Dropdowns open on hover and click, close on outside click or Escape, work from the keyboard, and highlight their parent on the pages inside them. The desktop menu now shows from 1024px; on phones the groups fold open and closed.
+- Landing label above the headline now reads "Circular Economy Engineering" (the "Uganda" part is dropped).
+- Short intro lines under section titles that previously went straight to cards or diagrams (Start where you are, What we build, People, Proof, Capabilities, Viability test, Operators, How we measure, Where we fit, 4Rs, Leadership, Roles, The two companies, Who leads each stage, CGSC services, Ways to help), plus a lead on the About page header. All wording is drawn from the client copy; no new claims.
+
 ## v3.1.0
 
 Back to the v2.2.1 template, with only the content, diagrams and colours updated from the client's revised copy.
