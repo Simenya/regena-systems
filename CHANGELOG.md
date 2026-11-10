@@ -1,5 +1,20 @@
 # Changelog
 
+## v3.0.0
+
+Rebuilt from the client's "Website Copy (Revised)".
+
+- New positioning and wording throughout: "Circular economy engineering", "We turn waste into the income that keeps water, energy and food running."
+- New look: Forest, Leaf, Amber, Mist and Ink palette, Poppins, amber "Work with us" button and outlined "Back a project" button. Light is still the default, with the dark toggle.
+- New menu: Home, What we do, Nakifuuma, Who it's for, About, Partnership, Contact, plus the two buttons. Under 1280px it collapses to the hamburger.
+- New pages: Nakifuuma (with how we measure and where we fit), Who it's for (four audiences), Back a project, Work with us. Evidence, Donate and Partner pages are replaced by redirects.
+- New visuals: circular loop diagram (a numbered list on phones), four-step viability test, colour-coded "who leads at each stage" rows with a key, dark forest stats band with the "commitments, not results" note.
+- One enquiry form everywhere (popup, Work with us page, Contact page) with "I am a..." and "What would you like?" dropdowns. Buttons preselect the request. Thank-you message promises a reply within five working days.
+- Contact details now use the company email address instead of Gmail. No registration number is shown.
+- Held back on purpose because the client copy marks them unfinished: bracketed placeholders, the Invest route, the Luganda section, the optional training-partner line, the Greenville and Fundiwa row, "Read more" links without a destination, director portraits and the privacy notice link. See the README checklist.
+- The client's alt text for the hero photo describes a team photo, which the current photo is not, so an accurate description is used instead.
+
+
 ## v2.2.1
 
 - Home hero: the headline "Engineering that stays until what we build is still working." is back as the main text. The tagline "WATER. SANITATION. RENEWABLE ENERGY. FOOD SYSTEMS" now sits directly under it as the supporting line.

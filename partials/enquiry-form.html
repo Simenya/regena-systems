@@ -1,0 +1,41 @@
+<form class="space-y-4" data-form="enquiry" novalidate>
+  <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px] h-0 w-0 opacity-0" />
+  <input type="hidden" name="form_type" value="Work with us" />
+  <div class="grid sm:grid-cols-2 gap-4">
+    <label class="block"><span class="label">I am a&hellip;</span>
+      <select class="field" name="who" required>
+        <option value="" disabled selected>Choose one</option>
+        <option value="Funder or foundation">Funder or foundation</option>
+        <option value="Community, farm or enterprise">Community, farm or enterprise</option>
+        <option value="Student or researcher">Student or researcher</option>
+        <option value="Investor">Investor</option>
+        <option value="Government or agency">Government or agency</option>
+        <option value="Media">Media</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+    <label class="block"><span class="label">What would you like?</span>
+      <select class="field" name="request" required>
+        <option value="" disabled selected>Choose one</option>
+        <option value="Back a project">Back a project</option>
+        <option value="A viability check">A viability check</option>
+        <option value="Research or placement">Research or placement</option>
+        <option value="Visit Nakifuuma">Visit Nakifuuma</option>
+        <option value="Data pack">Data pack</option>
+        <option value="Something else">Something else</option>
+      </select>
+    </label>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <label class="block"><span class="label">Full name</span><input class="field" type="text" name="from_name" required autocomplete="name" placeholder="Your name" /></label>
+    <label class="block"><span class="label">Email</span><input class="field" type="email" name="from_email" required autocomplete="email" placeholder="you@organisation.org" /></label>
+  </div>
+  <label class="block"><span class="label">Organisation <small>(optional)</small></span><input class="field" type="text" name="organisation" autocomplete="organization" placeholder="Foundation, farm, university, company" /></label>
+  <label class="block"><span class="label">Message</span><textarea class="field" name="message" required placeholder="What you have in mind"></textarea></label>
+  <label class="flex items-start gap-3 text-[13px] text-inksoft leading-snug">
+    <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 accent-[#1F4D3A]" />
+    <span>I agree that Regena Systems Africa Ltd may contact me about this message.</span>
+  </label>
+  <button type="submit" class="btn btn-primary">Send message</button>
+  <p data-status role="status" aria-live="polite" hidden></p>
+</form>

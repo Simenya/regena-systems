@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regena Systems Africa Ltd | Community Engineering for Water, Sanitation, Energy and Food Systems</title>
-  <meta name="description" content="Regena Systems Africa Ltd is a community engineering company in Uganda. We design, build and maintain affordable water, sanitation, clean energy, resource recovery, shelter and food systems, then stay under contract to keep them working." />
+  <title>Regena Systems Africa | Circular economy engineering in Uganda</title>
+  <meta name="description" content="Regena turns farm and organic waste into the income that keeps water, energy and food systems running. See the model working at Nakifuuma, Mukono." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Regena Systems Africa Ltd | Community Engineering" />
-  <meta property="og:description" content="We design, build and maintain the systems a community depends on, then stay under contract to keep them working." />
+  <meta property="og:title" content="Regena Systems Africa | Circular economy engineering in Uganda" />
+  <meta property="og:description" content="Regena turns farm and organic waste into the income that keeps water, energy and food systems running. See the model working at Nakifuuma, Mukono." />
   <meta property="og:image" content="assets/regena-logo.png" />
 <!--@head-->
-<meta name="theme-color" content="#f4f9fc" />
+<meta name="theme-color" content="#FAFCFA" />
 <meta name="color-scheme" content="light dark" />
 <meta name="author" content="Regena Systems Africa Ltd" />
+<meta property="og:site_name" content="Regena Systems Africa" />
 <link rel="icon" type="image/png" href="assets/regena-logo.png" />
 <link rel="apple-touch-icon" href="assets/regena-logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="assets/tailwind.config.js"></script>
 <link rel="stylesheet" href="assets/styles.css" />
@@ -41,41 +42,47 @@
       <a href="index.html" class="flex items-center gap-2.5 shrink-0" aria-label="Regena Systems Africa, home">
         <img src="assets/regena-logo.png" alt="" class="h-10 w-10 object-contain" />
         <span class="flex flex-col leading-none">
-          <span class="nav-wordmark font-display font-bold text-[15px] tracking-tight text-ink">Regena Systems Africa</span>
-          <span class="u-label text-[8.5px] text-primary mt-1">Community Engineering</span>
+          <span class="nav-wordmark font-bold text-[15px] tracking-tight text-head">Regena Systems Africa</span>
+          <span class="nav-tagline mt-1 text-[10px] font-medium text-amber">Circular economy engineering</span>
         </span>
       </a>
 
-      <nav class="hidden lg:flex items-center" aria-label="Primary">
-        <a href="index.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Home</a>
-        <a href="what-we-do.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">What we do</a>
-        <a href="about.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">About</a>
-        <a href="contact.html" data-nav class="link-underline px-2.5 py-2 text-[11px] font-semibold u-label text-inksoft hover:text-ink">Contact</a>
+      <nav class="hidden xl:flex items-center" aria-label="Primary">
+        <a href="index.html" data-nav class="nav-link">Home</a>
+        <a href="what-we-do.html" data-nav class="nav-link">What we do</a>
+        <a href="nakifuuma.html" data-nav class="nav-link">Nakifuuma</a>
+        <a href="who-its-for.html" data-nav class="nav-link">Who it&rsquo;s for</a>
+        <a href="about.html" data-nav class="nav-link">About</a>
+        <a href="partnership.html" data-nav class="nav-link">Partnership</a>
+        <a href="contact.html" data-nav class="nav-link">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
         <button id="theme-toggle" type="button" aria-label="Toggle light and dark theme"
-          class="h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-primary hover:bg-primary/10">
+          class="h-9 w-9 grid place-items-center rounded-xl border border-line/20 text-primary hover:bg-primary/10">
           <svg class="h-[18px] w-[18px] hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           <svg class="h-[18px] w-[18px] block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </button>
-        <a href="partner.html" data-open-partner class="btn btn-ghost btn-sm hidden md:inline-flex">Partner with us</a>
-        <a href="donate.html" class="btn btn-primary btn-sm hidden md:inline-flex">Donate</a>
-        <button id="menu-btn" type="button" class="lg:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/15 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <a href="back-a-project.html" class="btn btn-ghost btn-sm hidden md:inline-flex">Back a project</a>
+        <a href="work-with-us.html" data-open-partner class="btn btn-amber btn-sm hidden md:inline-flex">Work with us</a>
+        <button id="menu-btn" type="button" class="xl:hidden h-9 w-9 grid place-items-center rounded-xl border border-line/20 text-ink" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg id="menu-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="menu-close" class="h-5 w-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
     </div>
 
-    <div id="mobile-menu" class="lg:hidden hidden mt-2 rounded-2xl glass p-2">
-      <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Home</a>
-      <a href="what-we-do.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">What we do</a>
-      <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">About</a>
-      <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm font-semibold text-inksoft hover:bg-primary/10 hover:text-ink">Contact</a>
+    <div id="mobile-menu" class="xl:hidden hidden mt-2 rounded-2xl glass p-2">
+      <a href="index.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">Home</a>
+      <a href="what-we-do.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">What we do</a>
+      <a href="nakifuuma.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">Nakifuuma</a>
+      <a href="who-its-for.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">Who it&rsquo;s for</a>
+      <a href="about.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">About</a>
+      <a href="partnership.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">Partnership</a>
+      <a href="contact.html" class="block px-4 py-3 rounded-xl text-sm font-medium text-inksoft hover:bg-primary/10 hover:text-ink">Contact</a>
       <div class="grid grid-cols-2 gap-2 mt-2">
-        <a href="partner.html" data-open-partner class="btn btn-ghost">Partner with us</a>
-        <a href="donate.html" class="btn btn-primary">Donate</a>
+        <a href="back-a-project.html" class="btn btn-ghost">Back a project</a>
+        <a href="work-with-us.html" data-open-partner class="btn btn-amber">Work with us</a>
       </div>
     </div>
   </div>
@@ -84,110 +91,63 @@
 
 <main id="main">
   <!-- HERO -->
-  <section id="home" class="relative min-h-[100svh] flex items-center overflow-hidden bg-[#06131c] pt-28 pb-20">
-    <div class="absolute inset-0 z-0">
-      <img src="assets/hero-irrigation.jpg" data-fallback fetchpriority="high"
-           alt="" class="h-full w-full object-cover object-[28%_center] sm:object-center" />
-      <div class="absolute inset-0 bg-[#06131c]/45 sm:bg-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-[#06131c]/85 via-[#06131c]/45 to-[#06131c]/5"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-[#06131c]/55 via-transparent to-[#06131c]/70"></div>
-    </div>
-    <div class="relative z-10 wrap w-full">
-      <div class="max-w-4xl">
-        <h1 class="rise font-display font-bold text-white text-[2.1rem] leading-[1.12] sm:text-5xl lg:text-[3.6rem] tracking-tight">
-          Engineering that stays until<br class="hidden sm:block" />
-          what we build is <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-200 to-teal-200">still working</span>.
-        </h1>
-        <p class="rise mt-5 font-display font-semibold uppercase text-white/90 tracking-[0.08em] text-[.8rem] sm:text-base lg:text-lg leading-relaxed" style="animation-delay:.05s">
-          <span class="inline-block">Water<span class="text-sky-300">.</span></span>
-          <span class="inline-block">Sanitation<span class="text-sky-300">.</span></span>
-          <span class="inline-block">Renewable energy<span class="text-sky-300">.</span></span>
-          <span class="inline-block">Food systems</span>
-        </p>
-        <p class="rise mt-4 text-[15px] sm:text-lg text-slate-100/90 font-light leading-relaxed max-w-xl" style="animation-delay:.1s">
-          We design, build and maintain the systems a community depends on, then stay under contract to keep them working.
-        </p>
-        <div class="rise mt-8 flex flex-wrap items-center gap-3" style="animation-delay:.16s">
-          <a href="#why" class="btn btn-primary">Learn more <span data-icon="arrow"></span></a>
-          <a href="contact.html#visit" data-virtual-tour class="btn btn-outline-light"><span data-icon="play"></span> Virtual Tour</a>
-        </div>
-      </div>
-    </div>
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2" aria-hidden="true">
-      <span class="flex h-9 w-6 justify-center rounded-full border border-white/40 p-1"><span id="scroll-dot" class="h-2 w-1.5 rounded-full bg-accent"></span></span>
-    </div>
-  </section>
-
-  <!-- WHY REGENA -->
-  <section id="why" class="section">
-    <div class="wrap grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-      <div class="lg:col-span-5">
-        <p class="eyebrow">Why Regena</p>
-        <h2 class="h2 mt-3">We stay until it works.</h2>
-      </div>
-      <div class="lg:col-span-7 space-y-5">
-        <p class="lead">Water, sanitation, energy and food projects are usually funded and delivered separately. Each one ends at handover, and few have a performance record after that. Together they rarely add up to a working system.</p>
-        <p class="lead">Regena builds them as one system and stays under a paid service contract to keep them running. Waste from one becomes the input to another, and that income is what keeps the service affordable.</p>
-        <a href="about.html" class="link-arrow">About Regena <span data-icon="arrow"></span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
-  <section id="how" class="section bg-surface2/50 border-y border-line/10">
-    <div class="wrap">
+  <section id="home" class="hero">
+    <div class="wrap w-full hero-copy pt-32 pb-6 lg:py-28">
       <div class="max-w-xl">
-        <p class="eyebrow">How we work</p>
-        <h2 class="h2 mt-3">Test it, build it, stay and prove it.</h2>
-      </div>
-      <div class="mt-12 grid gap-5 md:grid-cols-3">
-        <div class="card">
-          <span class="u-label text-[11px] text-primary">01</span>
-          <h3 class="h3 mt-3">Test viability first</h3>
-          <p class="soft mt-2">Before we build, we ask who operates it, who pays, what offsets the cost and what happens if it fails.</p>
-          <a href="what-we-do.html#viability" class="link-arrow mt-4">The viability test <span data-icon="arrow"></span></a>
-        </div>
-        <div class="card">
-          <span class="u-label text-[11px] text-primary">02</span>
-          <h3 class="h3 mt-3">Build against a baseline</h3>
-          <p class="soft mt-2">Flow, quality, energy and output are measured on the day of handover and never reconstructed later.</p>
-          <a href="evidence.html" class="link-arrow mt-4">How we measure <span data-icon="arrow"></span></a>
-        </div>
-        <div class="card">
-          <span class="u-label text-[11px] text-primary">03</span>
-          <h3 class="h3 mt-3">Stay and report</h3>
-          <p class="soft mt-2">Paid maintenance, a 48-hour response commitment and uptime reported to the customer twice a year.</p>
-          <a href="evidence.html#nakifuuma" class="link-arrow mt-4">See it at Nakifuuma <span data-icon="arrow"></span></a>
+        <p class="eyebrow rise" style="color:#E9B27E">Circular economy engineering &middot; Uganda</p>
+        <h1 class="rise mt-4 font-bold text-white text-[1.95rem] sm:text-4xl lg:text-[2.7rem] leading-[1.22] tracking-tight" style="animation-delay:.05s">We turn waste into the income that keeps water, energy and food running.</h1>
+        <p class="rise mt-6 text-[15px] sm:text-base text-white/85 leading-relaxed" style="animation-delay:.1s">Regena designs, builds and operates connected water, energy, resource-recovery and food systems, and uses what one system throws away to help pay for the next.</p>
+        <div class="rise mt-8 flex flex-wrap items-center gap-3" style="animation-delay:.15s">
+          <a href="nakifuuma.html" class="btn btn-amber">See it at Nakifuuma <span data-icon="arrow"></span></a>
+          <a href="who-its-for.html" class="btn btn-outline-light">Who it&rsquo;s for</a>
         </div>
       </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/hero-irrigation.jpg" data-fallback fetchpriority="high" alt="An irrigation sprinkler watering young crops" />
+    </div>
+  </section>
 
-      <div class="mt-14 border-t border-line/10 pt-12" aria-label="Field measures">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
-          <div>
-            <div class="font-display text-4xl font-bold text-ink"><span data-count="1">1</span></div>
-            <div class="eyebrow mt-2">Operating site</div>
-            <p class="soft mt-2">Nakifuuma, a five-acre working farm in Mukono.</p>
-          </div>
-          <div class="lg:border-l lg:border-line/10 lg:pl-8">
-            <div class="font-display text-4xl font-bold text-ink"><span data-count="6">6</span></div>
-            <div class="eyebrow mt-2">Connected systems</div>
-            <p class="soft mt-2">Run as one system, not six service lines.</p>
-          </div>
-          <div class="lg:border-l lg:border-line/10 lg:pl-8">
-            <div class="font-display text-4xl font-bold text-ink"><span data-count="95">95</span>%</div>
-            <div class="eyebrow mt-2">Uptime target</div>
-            <p class="soft mt-2">Reported to each customer twice a year.</p>
-          </div>
-          <div class="lg:border-l lg:border-line/10 lg:pl-8">
-            <div class="font-display text-4xl font-bold text-ink"><span data-count="48">48</span> hr</div>
-            <div class="eyebrow mt-2">Fault response</div>
-            <p class="soft mt-2">A commitment, with downtime logged.</p>
-          </div>
-        </div>
-        <div class="mt-12 flex flex-wrap gap-3">
-          <a href="evidence.html#nakifuuma" class="btn btn-primary">Read the evidence <span data-icon="arrow"></span></a>
-          <a href="contact.html#visit" class="btn btn-ghost">Plan a visit</a>
-        </div>
+  <!-- START WHERE YOU ARE -->
+  <section class="section">
+    <div class="wrap">
+      <div class="max-w-2xl "><p class="eyebrow">Start where you are</p><h2 class="h2 mt-3">Six ways in, one practice behind them</h2></div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><a href="who-its-for.html#funders" class="card card-hover reveal block"><span class="icon-box"><span data-icon="money"></span></span><h3 class="h3 mt-5">Funders and foundations</h3><p class="soft mt-2">Back a measured proof point and get the results reported back.</p></a><a href="who-its-for.html#communities" class="card card-hover reveal block"><span class="icon-box"><span data-icon="home"></span></span><h3 class="h3 mt-5">Communities and customers</h3><p class="soft mt-2">Get a system that pays part of its own way, with a named local operator.</p></a><a href="who-its-for.html#students" class="card card-hover reveal block"><span class="icon-box"><span data-icon="training"></span></span><h3 class="h3 mt-5">Students and researchers</h3><p class="soft mt-2">Research and train at a working five-acre site, with real data.</p></a><a href="who-its-for.html#environment" class="card card-hover reveal block"><span class="icon-box"><span data-icon="food"></span></span><h3 class="h3 mt-5">Environmentalists</h3><p class="soft mt-2">See what is recovered instead of burned or dumped, and measured.</p></a><a href="who-its-for.html#environment" class="card card-hover reveal block"><span class="icon-box"><span data-icon="recovery"></span></span><h3 class="h3 mt-5">Circular economists and investors</h3><p class="soft mt-2">See the unit economics: what is recovered, sold and offset.</p></a><a href="nakifuuma.html#fit" class="card card-hover reveal block"><span class="icon-box"><span data-icon="clipboard"></span></span><h3 class="h3 mt-5">Government and partners</h3><p class="soft mt-2">Field data and alignment with Uganda’s circular economy agenda.</p></a></div>
+    </div>
+  </section>
+
+  <!-- THE IDEA -->
+  <section id="idea" class="section band-mist">
+    <div class="wrap grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div class="lg:col-span-5">
+        <p class="eyebrow">The idea</p>
+        <h2 class="h2 mt-3">Waste from one system pays for the next</h2>
+        <p class="lead mt-5">Most water, energy and food projects are funded one at a time, and each one ends up with a running cost nobody can carry. We build them as one system. Manure and organic waste are treated safely, turned into products people buy, and that income lowers the fee for the service.</p>
+        <p class="note mt-5">Nothing useful is wasted. Nothing harmful is passed on.</p>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="hidden md:block mx-auto max-w-[34rem]"><svg class="loop-svg" viewBox="0 0 640 640" role="img" aria-labelledby="loop-t loop-d" xmlns="http://www.w3.org/2000/svg"><title id="loop-t">Waste from one system pays for the next</title><desc id="loop-d">Six steps in a loop: manure and organic waste, treated safely, compost, feed and briquettes, sales income, lower fees for water and energy, more food and livestock output, then back to manure and organic waste. All six form one system.</desc><defs><marker id="loop-ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5.2" markerHeight="5.2" orient="auto"><path class="loop-head" d="M0 0 10 5 0 10z"/></marker></defs><path class="loop-arrow" d="M411.0 114.2 A225 225 0 0 1 462.0 145.5" marker-end="url(#loop-ah)"/><path class="loop-arrow" d="M543.7 295.9 A225 225 0 0 1 542.1 355.8" marker-end="url(#loop-ah)"/><path class="loop-arrow" d="M452.7 501.7 A225 225 0 0 1 400.1 530.3" marker-end="url(#loop-ah)"/><path class="loop-arrow" d="M229.0 525.8 A225 225 0 0 1 178.0 494.5" marker-end="url(#loop-ah)"/><path class="loop-arrow" d="M96.3 344.1 A225 225 0 0 1 97.9 284.2" marker-end="url(#loop-ah)"/><path class="loop-arrow" d="M187.3 138.3 A225 225 0 0 1 239.9 109.7" marker-end="url(#loop-ah)"/><circle class="loop-node loop-node-hl" cx="320.0" cy="95.0" r="84"/><g transform="translate(304.0 43.0) scale(1.333)"><g class="loop-icon loop-icon-hl"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></g></g><text class="loop-text" x="320.0" y="117.0">Manure and</text><text class="loop-text" x="320.0" y="137.0">organic waste</text><circle class="loop-node" cx="514.9" cy="207.5" r="84"/><g transform="translate(498.9 155.5) scale(1.333)"><g class="loop-icon"><path d="M12 3 4 6v6c0 5 3.4 8.5 8 9 4.6-.5 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></g></g><text class="loop-text" x="514.9" y="229.5">Treated safely,</text><text class="loop-text" x="514.9" y="249.5">disease barriers</text><circle class="loop-node" cx="514.9" cy="432.5" r="84"/><g transform="translate(498.9 380.5) scale(1.333)"><g class="loop-icon"><path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></g></g><text class="loop-text" x="514.9" y="454.5">Compost, feed,</text><text class="loop-text" x="514.9" y="474.5">briquettes</text><circle class="loop-node" cx="320.0" cy="545.0" r="84"/><g transform="translate(304.0 493.0) scale(1.333)"><g class="loop-icon"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5a2.5 2 0 0 1 5 0c0 2.5-5 1.5-5 4a2.5 2 0 0 0 5 0"/></g></g><text class="loop-text" x="320.0" y="567.0">Sales</text><text class="loop-text" x="320.0" y="587.0">income</text><circle class="loop-node" cx="125.1" cy="432.5" r="84"/><g transform="translate(109.1 380.5) scale(1.333)"><g class="loop-icon"><path d="M12 2.7S5 10 5 14.5a7 7 0 0 0 14 0C19 10 12 2.7 12 2.7Z"/></g></g><text class="loop-text" x="125.1" y="454.5">Lower fees for</text><text class="loop-text" x="125.1" y="474.5">water and energy</text><circle class="loop-node" cx="125.1" cy="207.5" r="84"/><g transform="translate(109.1 155.5) scale(1.333)"><g class="loop-icon"><path d="M12 22V12"/><path d="M12 12c0-4 2-7 6-8 0 4-2 7-6 8Z"/><path d="M12 14c0-3-2-5-6-6 0 3 2 5 6 6Z"/></g></g><text class="loop-text" x="125.1" y="229.5">More food and</text><text class="loop-text" x="125.1" y="249.5">livestock output</text><circle class="loop-core" cx="320" cy="320" r="96"/><text class="loop-core-text" x="320" y="316">One</text><text class="loop-core-text" x="320" y="352">system</text></svg></div>
+        <ol class="loop-list md:hidden" aria-label="How the loop works"><li><span class="h-5 w-5 shrink-0" data-icon="recovery"></span>Manure and organic waste</li><li><span class="h-5 w-5 shrink-0" data-icon="shield"></span>Treated safely, disease barriers</li><li><span class="h-5 w-5 shrink-0" data-icon="package"></span>Compost, feed, briquettes</li><li><span class="h-5 w-5 shrink-0" data-icon="money"></span>Sales income</li><li><span class="h-5 w-5 shrink-0" data-icon="water"></span>Lower fees for water and energy</li><li><span class="h-5 w-5 shrink-0" data-icon="food"></span>More food and livestock output</li></ol>
+        <p class="md:hidden mt-3 text-center text-sm font-semibold text-head">The whole loop is one system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="proof" class="section band-forest on-dark">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#E9B27E">Proof, not promises</p>
+      <h2 class="h2 mt-3 max-w-2xl" style="color:#fff">Nakifuuma: the farm where the model is tested daily</h2>
+      <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
+        <div><div class="stat-num"><span data-count="5">5</span></div><div class="stat-label">Acres</div><p class="stat-line">A working farm in Mukono, with a resident host community.</p></div>
+        <div><div class="stat-num"><span data-count="6">6</span></div><div class="stat-label">Connected systems</div><p class="stat-line">Water, energy, sanitation, recovery, food and building, run as one.</p></div>
+        <div><div class="stat-num"><span data-count="95">95</span>%</div><div class="stat-label">Uptime target</div><p class="stat-line">Reported to every customer twice a year.</p></div>
+        <div><div class="stat-num"><span data-count="48">48</span> hr</div><div class="stat-label">Fault response</div><p class="stat-line">A commitment, with every hour of downtime logged.</p></div>
+      </div>
+      <p class="mt-10 italic text-white/75 text-sm max-w-2xl">The 95% and 48-hour figures are commitments, not results. Results are published as baselines are recorded.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="work-with-us.html" data-open-partner data-intent="Visit Nakifuuma" class="btn btn-amber">Plan a visit</a>
+        <a href="nakifuuma.html#measure" class="btn btn-outline-light">How we measure</a>
       </div>
     </div>
   </section>
@@ -195,44 +155,33 @@
   <!-- WHAT WE BUILD -->
   <section class="section">
     <div class="wrap">
-      <div class="flex flex-wrap items-end justify-between gap-6">
-        <div class="max-w-xl">
-          <p class="eyebrow reveal">What we build</p>
-          <h2 class="h2 mt-3 reveal">Six systems, one practice.</h2>
+      <div class="max-w-2xl "><p class="eyebrow">What we build</p><h2 class="h2 mt-3">Six systems, one circular practice</h2></div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><a href="what-we-do.html#recovery" class="card card-hover reveal block card-hl"><span class="icon-box"><span data-icon="recovery"></span></span><h3 class="h3 mt-5">Resource recovery</h3><p class="soft mt-2">Manure and organic waste into compost, protein feed and fuel briquettes, with barriers to disease.</p></a><a href="what-we-do.html#water" class="card card-hover reveal block"><span class="icon-box"><span data-icon="water"></span></span><h3 class="h3 mt-5">Water for productive use</h3><p class="soft mt-2">Solar pumping, rainwater storage, irrigation and livestock water, with quality tested.</p></a><a href="what-we-do.html#energy" class="card card-hover reveal block"><span class="icon-box"><span data-icon="energy"></span></span><h3 class="h3 mt-5">Renewable energy</h3><p class="soft mt-2">Solar power for pumping, processing and cold storage. No tree cutting.</p></a><a href="what-we-do.html#sanitation" class="card card-hover reveal block"><span class="icon-box"><span data-icon="sanitation"></span></span><h3 class="h3 mt-5">Sanitation and safe reuse</h3><p class="soft mt-2">Toilets and handwashing where sludge is treated and returned to the soil safely.</p></a><a href="what-we-do.html#food" class="card card-hover reveal block"><span class="icon-box"><span data-icon="food"></span></span><h3 class="h3 mt-5">Food systems</h3><p class="soft mt-2">Soil health, irrigation and farm infrastructure that let farms grow, store and sell more.</p></a><a href="what-we-do.html#building" class="card card-hover reveal block"><span class="icon-box"><span data-icon="home"></span></span><h3 class="h3 mt-5">Low-carbon building</h3><p class="soft mt-2">Interlocking blocks pressed from local subsoil. No firing, no firewood.</p></a></div>
+      <p class="note mt-8">Resource recovery leads because it is what makes the rest affordable.</p>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section class="section band-mist">
+    <div class="wrap">
+      <div class="max-w-2xl "><p class="eyebrow">The people behind it</p><h2 class="h2 mt-3">Global systems thinking, local delivery</h2></div>
+      <div class="mt-12 grid gap-5 md:grid-cols-2">
+        <div class="card reveal flex gap-5 !p-7">
+          <span class="avatar" aria-hidden="true">BA</span>
+          <div>
+            <h3 class="h3">Prof. Bernard Amadei, Director</h3>
+            <p class="soft mt-2">Founding president of Engineers Without Borders-USA. Elected member of the US National Academy of Engineering. Brings the systems science behind the model.</p>
+            <a href="about.html#leadership" class="link-arrow mt-4">Read more <span data-icon="arrow"></span></a>
+          </div>
         </div>
-        <a href="what-we-do.html" class="link-arrow reveal">See everything we build <span data-icon="arrow"></span></a>
-      </div>
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <a href="what-we-do.html#water" class="card card-hover reveal block">
-          <span class="icon-box"><span data-icon="water"></span></span>
-          <h3 class="h3 mt-5">Water</h3>
-          <p class="soft mt-2">Boreholes, solar pumping, rainwater storage and water quality.</p>
-        </a>
-        <a href="what-we-do.html#sanitation" class="card card-hover reveal block" style="transition-delay:.05s">
-          <span class="icon-box"><span data-icon="sanitation"></span></span>
-          <h3 class="h3 mt-5">Sanitation</h3>
-          <p class="soft mt-2">Toilets, handwashing, faecal sludge handling and safe reuse.</p>
-        </a>
-        <a href="what-we-do.html#energy" class="card card-hover reveal block" style="transition-delay:.1s">
-          <span class="icon-box"><span data-icon="energy"></span></span>
-          <h3 class="h3 mt-5">Renewable energy</h3>
-          <p class="soft mt-2">Solar generation, productive-use energy and backup, with no tree cutting.</p>
-        </a>
-        <a href="what-we-do.html#recovery" class="card card-hover reveal block">
-          <span class="icon-box"><span data-icon="recovery"></span></span>
-          <h3 class="h3 mt-5">Resource recovery</h3>
-          <p class="soft mt-2">Organic waste turned into compost, protein feed and fuel briquettes.</p>
-        </a>
-        <a href="what-we-do.html#shelter" class="card card-hover reveal block" style="transition-delay:.05s">
-          <span class="icon-box"><span data-icon="shelter"></span></span>
-          <h3 class="h3 mt-5">Shelter</h3>
-          <p class="soft mt-2">Interlocking blocks pressed from local subsoil. No firing, no trees.</p>
-        </a>
-        <a href="what-we-do.html#food" class="card card-hover reveal block" style="transition-delay:.1s">
-          <span class="icon-box"><span data-icon="food"></span></span>
-          <h3 class="h3 mt-5">Food systems</h3>
-          <p class="soft mt-2">Irrigation, livestock water, soil health and farm infrastructure.</p>
-        </a>
+        <div class="card reveal flex gap-5 !p-7">
+          <span class="avatar" aria-hidden="true">PN</span>
+          <div>
+            <h3 class="h3">Peter Nzabanita Sabiiti, Founder and Managing Director</h3>
+            <p class="soft mt-2">Ugandan civil engineer, in water and sanitation since 2004. Researches resource recovery from livestock waste. Runs Nakifuuma and Regena’s delivery.</p>
+            <a href="about.html#leadership" class="link-arrow mt-4">Read more <span data-icon="arrow"></span></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -241,29 +190,25 @@
   <section class="section">
     <div class="wrap grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
       <div class="lg:col-span-6">
-        <p class="eyebrow reveal">In partnership</p>
-        <h2 class="h2 mt-3 reveal">CGSC models it.<br />Regena proves it.</h2>
+        <p class="eyebrow">In partnership</p>
+        <h2 class="h2 mt-3">Common Ground Solutions Center models it. Regena builds and proves it.</h2>
       </div>
-      <div class="lg:col-span-6 space-y-5 reveal">
-        <p class="lead">We deliver alongside <strong class="font-semibold text-ink">Common Ground Solutions Center, LLC</strong>, a United States consultancy with two decades of systems practice in engineering for development. They model and plan. We build, commission and maintain. Two companies, with separate contracts and separate accountability.</p>
+      <div class="lg:col-span-6 space-y-5">
+        <p class="lead">Two companies, two countries, separate contracts. CGSC leads diagnostics, peacebuilding and system dynamics modelling.</p>
         <a href="partnership.html" class="link-arrow">How the partnership works <span data-icon="arrow"></span></a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="pb-20 lg:pb-28">
+  <section class="pb-16 lg:pb-24">
     <div class="wrap">
-      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0b5f93] to-[#083b5c] px-6 py-14 sm:px-14 text-white">
+      <div class="band-forest on-dark relative overflow-hidden rounded-3xl px-6 py-14 sm:px-14">
         <div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl"></div>
         <div class="relative max-w-2xl">
-          <p class="eyebrow" style="color:#bae6fd">Donate or partner</p>
-          <h2 class="h2 mt-3" style="color:#fff">Fund the next proof point.</h2>
-          <p class="mt-4 text-sky-100/90 font-light leading-relaxed">We are not asking you to fund a concept. We are asking you to fund the next proof point, using a model already being tested, with real data behind it.</p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="donate.html" class="btn btn-light">Donate</a>
-            <a href="partner.html" data-open-partner class="btn btn-outline-light">Partner with us</a>
-          </div>
+          <p class="eyebrow" style="color:#E9B27E">Back a project</p>
+          <h2 class="h2 mt-3" style="color:#fff">Fund the next proof point, not another concept</h2>
+          <p class="mt-4 text-white/85 leading-relaxed">Every system we commission starts with a measured baseline and keeps a service log. You see what your money built, how it performs and what it earns back.</p>
+          <div class="mt-8 flex flex-wrap gap-3"><a href="back-a-project.html" class="btn btn-outline-light">Back a project</a><a href="work-with-us.html" data-open-partner class="btn btn-amber">Work with us</a></div>
         </div>
       </div>
     </div>
@@ -275,37 +220,51 @@
   <div class="dialog-panel">
     <div class="flex items-start justify-between gap-4">
       <div>
-        <p class="eyebrow">Partner with us</p>
-        <h2 id="partner-dialog-title" class="font-display text-2xl font-bold text-ink mt-2 tracking-tight">Let's work together</h2>
-        <p class="soft mt-2">Tell us how you would like to partner. We reply personally with the next steps. To give, <a href="donate.html" class="text-primary font-medium underline underline-offset-4">go to the donate page</a>.</p>
+        <p class="eyebrow">Work with us</p>
+        <h2 id="partner-dialog-title" class="h2 mt-2" style="font-size:1.4rem">Tell us who you are and what you have in mind</h2>
+        <p class="soft mt-2">We reply personally within five working days with next steps, or an invitation to visit Nakifuuma.</p>
       </div>
-      <button type="button" data-close-dialog aria-label="Close" class="h-9 w-9 shrink-0 grid place-items-center rounded-xl border border-line/15 text-ink hover:bg-primary/10">
+      <button type="button" data-close-dialog aria-label="Close" class="h-9 w-9 shrink-0 grid place-items-center rounded-xl border border-line/20 text-ink hover:bg-primary/10">
         <span data-icon="close" class="h-5 w-5"></span>
       </button>
     </div>
     <div class="mt-6">
-      <form class="space-y-4" data-form="partner" novalidate>
+      <form class="space-y-4" data-form="enquiry" novalidate>
   <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px] h-0 w-0 opacity-0" />
-  <input type="hidden" name="form_type" value="Partner" />
+  <input type="hidden" name="form_type" value="Work with us" />
   <div class="grid sm:grid-cols-2 gap-4">
-    <label class="block"><span class="label">Full name</span><input class="field" type="text" name="from_name" required autocomplete="name" placeholder="Your name" /></label>
-    <label class="block"><span class="label">Email</span><input class="field" type="email" name="from_email" required autocomplete="email" placeholder="you@organisation.org" /></label>
-  </div>
-  <div class="grid sm:grid-cols-2 gap-4">
-    <label class="block"><span class="label">Organisation <small>(optional)</small></span><input class="field" type="text" name="organisation" autocomplete="organization" placeholder="Foundation, agency, company" /></label>
-    <label class="block"><span class="label">How would you like to partner?</span>
-      <select class="field" name="interest" required>
-        <option value="Fund the next proof point">Fund the next proof point</option>
-        <option value="Technical or research partnership">Technical or research partnership</option>
-        <option value="Visit the site">Visit the site</option>
-        <option value="In-kind support">In-kind support</option>
+    <label class="block"><span class="label">I am a&hellip;</span>
+      <select class="field" name="who" required>
+        <option value="" disabled selected>Choose one</option>
+        <option value="Funder or foundation">Funder or foundation</option>
+        <option value="Community, farm or enterprise">Community, farm or enterprise</option>
+        <option value="Student or researcher">Student or researcher</option>
+        <option value="Investor">Investor</option>
+        <option value="Government or agency">Government or agency</option>
+        <option value="Media">Media</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+    <label class="block"><span class="label">What would you like?</span>
+      <select class="field" name="request" required>
+        <option value="" disabled selected>Choose one</option>
+        <option value="Back a project">Back a project</option>
+        <option value="A viability check">A viability check</option>
+        <option value="Research or placement">Research or placement</option>
+        <option value="Visit Nakifuuma">Visit Nakifuuma</option>
+        <option value="Data pack">Data pack</option>
         <option value="Something else">Something else</option>
       </select>
     </label>
   </div>
-  <label class="block"><span class="label">Message</span><textarea class="field" name="message" required placeholder="Tell us a little about what you have in mind."></textarea></label>
-  <label class="flex items-start gap-3 text-[13px] text-inksoft font-light leading-snug">
-    <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 accent-[rgb(11,122,184)]" />
+  <div class="grid sm:grid-cols-2 gap-4">
+    <label class="block"><span class="label">Full name</span><input class="field" type="text" name="from_name" required autocomplete="name" placeholder="Your name" /></label>
+    <label class="block"><span class="label">Email</span><input class="field" type="email" name="from_email" required autocomplete="email" placeholder="you@organisation.org" /></label>
+  </div>
+  <label class="block"><span class="label">Organisation <small>(optional)</small></span><input class="field" type="text" name="organisation" autocomplete="organization" placeholder="Foundation, farm, university, company" /></label>
+  <label class="block"><span class="label">Message</span><textarea class="field" name="message" required placeholder="What you have in mind"></textarea></label>
+  <label class="flex items-start gap-3 text-[13px] text-inksoft leading-snug">
+    <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 accent-[#1F4D3A]" />
     <span>I agree that Regena Systems Africa Ltd may contact me about this message.</span>
   </label>
   <button type="submit" class="btn btn-primary">Send message</button>
@@ -319,56 +278,63 @@
 <footer class="border-t border-line/10">
   <div class="wrap py-14">
     <div class="grid gap-10 lg:grid-cols-12 border-b border-line/10 pb-12">
-      <div class="lg:col-span-5">
+      <div class="lg:col-span-4">
         <div class="flex items-center gap-3">
           <img src="assets/regena-logo.png" alt="" class="h-11 w-11 object-contain" />
           <div class="flex flex-col leading-none">
-            <span class="font-display font-bold text-ink tracking-tight">Regena Systems Africa Ltd</span>
-            <span class="u-label text-[8.5px] text-primary mt-1">Community Engineering</span>
+            <span class="font-bold text-head tracking-tight">Regena Systems Africa Ltd</span>
+            <span class="mt-1 text-[10px] font-medium text-amber">Circular economy engineering</span>
           </div>
         </div>
-        <p class="soft mt-5 max-w-sm">Systems thinking, community engineering, and the discipline to stay until what we build is still working.</p>
+        <p class="soft mt-5 max-w-xs">Circular economy engineering. Waste into the income that keeps services running.</p>
         <div class="mt-6 flex flex-wrap gap-2">
-          <a href="donate.html" class="btn btn-primary btn-sm">Donate</a>
-          <a href="partner.html" data-open-partner class="btn btn-ghost btn-sm">Partner with us</a>
+          <a href="work-with-us.html" data-open-partner class="btn btn-amber btn-sm">Work with us</a>
+          <a href="back-a-project.html" class="btn btn-ghost btn-sm">Back a project</a>
         </div>
       </div>
 
       <div class="lg:col-span-2">
         <h4 class="eyebrow">Explore</h4>
-        <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
+        <ul class="mt-4 space-y-2.5 text-sm text-inksoft">
           <li><a href="index.html" class="hover:text-ink">Home</a></li>
           <li><a href="what-we-do.html" class="hover:text-ink">What we do</a></li>
-          <li><a href="evidence.html" class="hover:text-ink">Evidence</a></li>
-          <li><a href="about.html" class="hover:text-ink">About</a></li>
+          <li><a href="nakifuuma.html" class="hover:text-ink">Nakifuuma</a></li>
+          <li><a href="who-its-for.html" class="hover:text-ink">Who it&rsquo;s for</a></li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-2">
+        <h4 class="eyebrow">About</h4>
+        <ul class="mt-4 space-y-2.5 text-sm text-inksoft">
+          <li><a href="about.html#principles" class="hover:text-ink">Mission and 4Rs</a></li>
+          <li><a href="about.html#leadership" class="hover:text-ink">Leadership</a></li>
+          <li><a href="about.html#roles" class="hover:text-ink">Roles and interests</a></li>
           <li><a href="partnership.html" class="hover:text-ink">Partnership</a></li>
         </ul>
       </div>
 
       <div class="lg:col-span-2">
         <h4 class="eyebrow">Get involved</h4>
-        <ul class="mt-4 space-y-2.5 text-sm text-inksoft font-light">
-          <li><a href="donate.html" class="hover:text-ink">Donate</a></li>
-          <li><a href="partner.html" class="hover:text-ink">Partner with us</a></li>
+        <ul class="mt-4 space-y-2.5 text-sm text-inksoft">
+          <li><a href="work-with-us.html" data-open-partner class="hover:text-ink">Work with us</a></li>
+          <li><a href="back-a-project.html" class="hover:text-ink">Back a project</a></li>
+          <li><a href="work-with-us.html" data-open-partner data-intent="Visit Nakifuuma" class="hover:text-ink">Plan a visit</a></li>
           <li><a href="contact.html" class="hover:text-ink">Contact</a></li>
-          <li><a href="contact.html#visit" class="hover:text-ink">Plan a site visit</a></li>
         </ul>
       </div>
 
-      <div class="lg:col-span-3">
+      <div class="lg:col-span-2">
         <h4 class="eyebrow">Contact</h4>
-        <ul class="mt-4 space-y-3 text-sm text-inksoft font-light">
+        <ul class="mt-4 space-y-3 text-sm text-inksoft">
           <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="pin"></span><span>Kampala, Uganda</span></li>
-          <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="mail"></span><a href="mailto:peter.nzabanita@gmail.com" class="hover:text-ink break-all">peter.nzabanita@gmail.com</a></li>
+          <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="mail"></span><a href="mailto:peter.nzabanita@regenasystems.com" class="hover:text-ink break-all">peter.nzabanita@regenasystems.com</a></li>
           <li class="flex items-start gap-2.5"><span class="mt-0.5 h-4 w-4 shrink-0 text-primary" data-icon="phone"></span><a href="tel:+256784290258" class="hover:text-ink">+256-784290258</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 text-xs text-inksoft font-light">
-      <span>&copy; <span data-year>2026</span> Regena Systems Africa Ltd. All rights reserved.</span>
-      <span>In partnership with Common Ground Solutions Center, LLC.</span>
-    </div>
+    <p class="pt-6 text-xs text-inksoft leading-relaxed max-w-4xl">Regena Systems Africa Ltd is a private company registered in Uganda. In partnership with Common Ground Solutions Center, LLC (USA), a separate company. Regena is not affiliated with Engineers Without Borders-USA, Engineers Without Borders East Africa or the EWB network.</p>
+    <p class="pt-3 text-xs text-inksoft">&copy; <span data-year>2026</span> Regena Systems Africa Ltd &middot; <a href="about.html#roles" class="underline underline-offset-2 hover:text-ink">Roles and interests</a></p>
   </div>
 </footer>
 <script src="assets/config.js"></script>

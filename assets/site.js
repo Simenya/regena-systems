@@ -27,6 +27,11 @@
     eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
     gift: '<path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/>',
     arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    money: '<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5a2.5 2 0 0 1 5 0c0 2.5-5 1.5-5 4a2.5 2 0 0 0 5 0"/>',
+    shield: '<path d="M12 3 4 6v6c0 5 3.4 8.5 8 9 4.6-.5 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>',
+    tools: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5Z"/>',
+    home: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/>',
+    package: '<path d="m7.5 4.3 9 5.2"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>',
     play: '<circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4V8Z"/>',
     check: '<path d="M20 6 9 17l-5-5"/>',
     mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
@@ -51,7 +56,7 @@
       var dark = root.classList.toggle("dark");
       try { localStorage.setItem("regena-theme", dark ? "dark" : "light"); } catch (e) {}
       var m = doc.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute("content", dark ? "#06131c" : "#f4f9fc");
+      if (m) m.setAttribute("content", dark ? "#0C1611" : "#FAFCFA");
     });
   }
 
@@ -88,13 +93,21 @@
     if (norm(a.getAttribute("href")) === here) { a.setAttribute("data-active", "true"); a.setAttribute("aria-current", "page"); }
   });
 
-  /* ---------- partner dialog ---------- */
+  /* ---------- work-with-us dialog ---------- */
   var dlg = doc.getElementById("partner-dialog");
+  // Buttons can carry data-intent="Visit Nakifuuma" to preselect "What would you like?".
+  function applyIntent(scope, intent) {
+    if (!intent || !scope) return;
+    var sel = scope.querySelector('select[name="request"]');
+    if (!sel) return;
+    for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].value === intent) { sel.selectedIndex = i; break; } }
+  }
   doc.addEventListener("click", function (e) {
     var opener = e.target.closest ? e.target.closest("[data-open-partner]") : null;
     if (opener && dlg && typeof dlg.showModal === "function") {
       e.preventDefault();
       if (menu) menu.classList.add("hidden");
+      applyIntent(dlg, opener.getAttribute("data-intent"));
       if (!dlg.open) dlg.showModal();
       var first = dlg.querySelector("input:not([type=hidden]):not([tabindex='-1']), select, textarea");
       if (first) first.focus();
@@ -103,7 +116,7 @@
     if (opener && !dlg) {
       // On the partner page the form is already inline, so just bring it into view.
       var apply = doc.getElementById("apply");
-      if (apply) { e.preventDefault(); if (menu) menu.classList.add("hidden"); apply.scrollIntoView({ behavior: "smooth" }); }
+      if (apply) { e.preventDefault(); if (menu) menu.classList.add("hidden"); applyIntent(apply, opener.getAttribute("data-intent")); apply.scrollIntoView({ behavior: "smooth" }); }
       return;
     }
     if (dlg && (e.target === dlg || (e.target.closest && e.target.closest("[data-close-dialog]")))) dlg.close();
