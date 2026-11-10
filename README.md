@@ -3,7 +3,7 @@
 Static multi-page site (plain HTML, Tailwind Play CDN, a little vanilla JS). No build step is needed to run or deploy it.
 Live: https://simenya.github.io/regena-systems/
 
-Look and wording follow the client's "Website Copy (Revised)" (Nov 2026): Forest, Leaf, Amber, Mist and Ink colours, Poppins, light theme by default with a dark toggle.
+Layout and components are the v2.2.1 template (floating glass nav, full-bleed hero, cards, banded sections). Wording, diagrams and palette follow the client's "Website Copy (Revised)" (Nov 2026): Forest, Leaf, Amber, Mist and Ink. Fonts are still Space Grotesk, Inter and JetBrains Mono; the client copy names Poppins, which is a three-line swap in `partials/head.html`, `assets/tailwind.config.js` and `assets/styles.css` if wanted. Light theme by default with a dark toggle.
 
 ## Pages
 
@@ -64,7 +64,8 @@ Versions are git tags. Switch between them with:
 
 ```bash
 git tag                 # list versions
-git checkout v2.2.1     # the previous light-blue multi-page version
+git checkout v2.2.1     # the earlier light-blue version (previous wording)
+git checkout v3.0.0     # the first green build (different section layouts)
 git checkout main       # back to the latest
 ```
 

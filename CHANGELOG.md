@@ -1,5 +1,17 @@
 # Changelog
 
+## v3.1.0
+
+Back to the v2.2.1 template, with only the content, diagrams and colours updated from the client's revised copy.
+
+- Restored the v2.2.1 look and structure: floating glass nav with mono uppercase links, full-bleed hero with the photo behind the text, bordered cards with icon boxes, banded sections, the dark Nakifuuma band, the rounded call-to-action band, the page headers with the grid background and the pill tags.
+- New wording and pages from the client copy (Home, What we do, Nakifuuma, Who it's for, About, Partnership, Back a project, Work with us, Contact), now laid out with the v2.2.1 section patterns.
+- Diagrams from the client's visual pack: circular loop, four-step viability test, colour-coded "who leads at each stage" rows with a key, dark forest stats band.
+- Green palette (Forest, Leaf, Amber, Mist, Ink) applied to the template tokens. Dark mode kept.
+- Menu now has the seven items from the client copy and the Back a project and Work with us buttons; the desktop menu shows from 1280px up.
+- Unfinished client items are still held back (see the README checklist).
+
+
 ## v3.0.0
 
 Rebuilt from the client's "Website Copy (Revised)".
