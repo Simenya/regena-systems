@@ -10,10 +10,12 @@ Layout and components are the v2.2.1 template (floating glass nav, full-bleed he
 | File | Purpose |
 |---|---|
 | `index.html` | Home: hero, six ways in, the circular idea, proof band, what we build, people, partnership, call to action |
-| `what-we-do.html` | Six capabilities, the four-question viability test, operators and skills |
+| `what-we-do.html` | Integrated community engineering, circular and regenerative systems, the viability test, living labs and learning, local enterprise development |
 | `nakifuuma.html` | The working farm, how we measure (service and circular measures), where we fit in Uganda's circular economy agenda |
 | `who-its-for.html` | Funders, communities and enterprises, students and researchers, environmentalists and circular economists |
-| `about.html` | Mission and vision, the 4Rs, leadership, roles and interests |
+| `about.html` | Our story and purpose, mission and vision, the 4Rs, founder and leadership |
+| `governance.html` | Governance and accountability, roles and interests |
+| `insights.html` | Insights and resources |
 | `partnership.html` | Regena and CGSC side by side, who leads each stage, CGSC services and ten-stage method |
 | `back-a-project.html` | Four ways to back a project |
 | `work-with-us.html` | The enquiry form (the nav button opens the same form as a popup on every other page) |

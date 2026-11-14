@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.3.0
+
+- Home hero: headline is now "Turning Local Resources into Lasting Community Value", with "Recover Resources. Generate Income. Sustain Communities." under it and the new "Together, we turn local resources..." paragraph. Added an "In partnership with Common Ground Solutions Center" line (bold, links to commongroundsolutionscenter.net).
+- New menu: Home, About Us, What We Do, Evidence (Demonstrations & Evidence), Insights & Resources, Get Involved (Partner & Get Involved), Contact, plus Work with us. Dropdowns show the full section name as a heading. Desktop menu from 1280px; below that the hamburger with the full names.
+- New pages: `governance.html` (Governance and accountability: legal facts, evidence and accountability, commitments, roles and interests table moved here) and `insights.html` (Insights and resources: the deeper why and the 5Ps, resource links, field notes).
+- What we do is now four sections: Integrated community engineering, Circular and regenerative systems, Living labs and learning, Local enterprise development (content from the joint CGSC and Regena overview deck).
+- About: new "Our story and purpose" section. Nakifuuma: sector alignment with the Kigali Symposium 2026 pillars. Partnership: CGSC name links to its website.
+- Footer: CGSC name bold and linked; columns now About us, Explore, Get involved, Contact.
+
 ## v3.2.0
 
 - Cleaner menu: Home, What we do (dropdown: What we do, Who it's for), Nakifuuma, About (dropdown: About Regena, Leadership, Roles and interests, Partnership), Contact, plus the Back a project and Work with us buttons. Dropdowns open on hover and click, close on outside click or Escape, work from the keyboard, and highlight their parent on the pages inside them. The desktop menu now shows from 1024px; on phones the groups fold open and closed.

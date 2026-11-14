@@ -232,3 +232,14 @@ body.has-hero #nav-inner:not(.glass) .nav-dd-btn:hover, body.has-hero #nav-inner
 .mob-group summary:hover { background: rgb(var(--c-primary) / .08); color: rgb(var(--c-ink)); }
 .mob-group a { display: block; margin-left: 1rem; padding: .6rem 1rem; border-radius: .7rem; font-size: .85rem; font-weight: 500; color: rgb(var(--c-inksoft)); border-left: 2px solid rgb(var(--c-line) / .12); }
 .mob-group a:hover { background: rgb(var(--c-primary) / .08); color: rgb(var(--c-ink)); }
+
+/* right-aligned dropdown (last group, keeps the panel on screen) */
+.nav-dd-right .nav-dd-panel { left: auto; right: 0; transform: translate(0, 6px); }
+.nav-dd-right.open .nav-dd-panel { transform: translate(0, 0); }
+@media (hover: hover) { .nav-dd-right:hover .nav-dd-panel { transform: translate(0, 0); } }
+/* in-page section chips (What we do) */
+.chip-nav { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip-nav a { display: inline-flex; align-items: center; padding: .5rem .9rem; border-radius: 999px; font-size: .8rem; font-weight: 600;
+  color: rgb(var(--c-ink)); border: 1px solid rgb(var(--c-line) / .16); background: rgb(var(--c-surface)); }
+.chip-nav a:hover { border-color: rgb(var(--c-primary) / .5); color: rgb(var(--c-primary)); }
+.nav-dd-panel .dd-h { padding: .45rem .85rem .35rem; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: rgb(var(--c-amber-text)); }
