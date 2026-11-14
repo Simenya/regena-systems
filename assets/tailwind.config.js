@@ -3,9 +3,9 @@ tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Space Grotesk"', "ui-sans-serif", "system-ui", "sans-serif"],
-        sans: ['"Inter"', "ui-sans-serif", "system-ui", "sans-serif"],
-        mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+        display: ['"Poppins"', "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ['"Poppins"', "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ['"Inter"', "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
         bg: "rgb(var(--c-bg) / <alpha-value>)",

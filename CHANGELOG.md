@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.3.1
+
+- Fonts: Poppins is now the main font (body text, headlines, buttons, numbers). Smaller titles (card titles, section labels, table headings, dropdown headings, stat labels) use Inter, which pairs cleanly with Poppins. Space Grotesk and JetBrains Mono are removed.
+
 ## v3.3.0
 
 - Home hero: headline is now "Turning Local Resources into Lasting Community Value", with "Recover Resources. Generate Income. Sustain Communities." under it and the new "Together, we turn local resources..." paragraph. Added an "In partnership with Common Ground Solutions Center" line (bold, links to commongroundsolutionscenter.net).
