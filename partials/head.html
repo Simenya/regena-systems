@@ -1,4 +1,4 @@
-<meta name="theme-color" content="#F7FAF7" />
+<meta name="theme-color" content="#0C1611" />
 <meta name="color-scheme" content="light dark" />
 <meta name="author" content="Regena Systems Africa Ltd" />
 <link rel="icon" type="image/png" href="assets/regena-logo.png" />
@@ -13,8 +13,8 @@
   (function () {
     document.documentElement.classList.add("js");
     try {
-      // Light is the default; only honour an explicit saved "dark" choice.
-      if (localStorage.getItem("regena-theme") === "dark") document.documentElement.classList.add("dark");
-    } catch (e) {}
+      // Dark is the default; only honour an explicit saved "light" choice.
+      if (localStorage.getItem("regena-theme") !== "light") document.documentElement.classList.add("dark");
+    } catch (e) { document.documentElement.classList.add("dark"); }
   })();
 </script>

@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.3.2
+
+- Dark theme is now the default (a visitor's saved light choice is still remembered).
+- Dropdown menu items no longer show the small description lines.
+
 ## v3.3.1
 
 - Fonts: Poppins is now the main font (body text, headlines, buttons, numbers). Smaller titles (card titles, section labels, table headings, dropdown headings, stat labels) use Inter, which pairs cleanly with Poppins. Space Grotesk and JetBrains Mono are removed.
@@ -36,7 +41,7 @@ Back to the v2.2.1 template, with only the content, diagrams and colours updated
 Rebuilt from the client's "Website Copy (Revised)".
 
 - New positioning and wording throughout: "Circular economy engineering", "We turn waste into the income that keeps water, energy and food running."
-- New look: Forest, Leaf, Amber, Mist and Ink palette, Poppins, amber "Work with us" button and outlined "Back a project" button. Light is still the default, with the dark toggle.
+- New look: Forest, Leaf, Amber, Mist and Ink palette, Poppins, amber "Work with us" button and outlined "Back a project" button. Dark is the default, with a light toggle.
 - New menu: Home, What we do, Nakifuuma, Who it's for, About, Partnership, Contact, plus the two buttons. Under 1280px it collapses to the hamburger.
 - New pages: Nakifuuma (with how we measure and where we fit), Who it's for (four audiences), Back a project, Work with us. Evidence, Donate and Partner pages are replaced by redirects.
 - New visuals: circular loop diagram (a numbered list on phones), four-step viability test, colour-coded "who leads at each stage" rows with a key, dark forest stats band with the "commitments, not results" note.

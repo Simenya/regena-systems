@@ -10,7 +10,7 @@
   <meta property="og:description" content="How Regena Systems Africa stays accountable: a registered Ugandan company, measured baselines, service logs, published uptime, and declared director interests." />
   <meta property="og:image" content="assets/regena-logo.png" />
 <!--@head-->
-<meta name="theme-color" content="#F7FAF7" />
+<meta name="theme-color" content="#0C1611" />
 <meta name="color-scheme" content="light dark" />
 <meta name="author" content="Regena Systems Africa Ltd" />
 <link rel="icon" type="image/png" href="assets/regena-logo.png" />
@@ -25,9 +25,9 @@
   (function () {
     document.documentElement.classList.add("js");
     try {
-      // Light is the default; only honour an explicit saved "dark" choice.
-      if (localStorage.getItem("regena-theme") === "dark") document.documentElement.classList.add("dark");
-    } catch (e) {}
+      // Dark is the default; only honour an explicit saved "light" choice.
+      if (localStorage.getItem("regena-theme") !== "light") document.documentElement.classList.add("dark");
+    } catch (e) { document.documentElement.classList.add("dark"); }
   })();
 </script>
 <!--@/head-->
@@ -56,9 +56,9 @@
           </button>
           <div class="nav-dd-panel">
             <p class="dd-h">About Us</p>
-            <a href="about.html#story"><span class="t">Our story and purpose</span><span class="d">Why Regena exists, mission and vision</span></a>
-            <a href="about.html#leadership"><span class="t">Founder and leadership</span><span class="d">The two directors behind the work</span></a>
-            <a href="governance.html"><span class="t">Governance and accountability</span><span class="d">How we stay answerable for what we build</span></a>
+            <a href="about.html#story"><span class="t">Our story and purpose</span></a>
+            <a href="about.html#leadership"><span class="t">Founder and leadership</span></a>
+            <a href="governance.html"><span class="t">Governance and accountability</span></a>
           </div>
         </div>
 
@@ -69,10 +69,10 @@
           </button>
           <div class="nav-dd-panel">
             <p class="dd-h">What We Do</p>
-            <a href="what-we-do.html#engineering"><span class="t">Integrated community engineering</span><span class="d">Water, energy, sanitation, food and building as one system</span></a>
-            <a href="what-we-do.html#circular"><span class="t">Circular and regenerative systems</span><span class="d">Waste into income, with nothing harmful passed on</span></a>
-            <a href="what-we-do.html#learning"><span class="t">Living labs and learning</span><span class="d">Makers, operators and engineers formed on site</span></a>
-            <a href="what-we-do.html#enterprise"><span class="t">Local enterprise development</span><span class="d">Local fabrication, repair and recovered-product sales</span></a>
+            <a href="what-we-do.html#engineering"><span class="t">Integrated community engineering</span></a>
+            <a href="what-we-do.html#circular"><span class="t">Circular and regenerative systems</span></a>
+            <a href="what-we-do.html#learning"><span class="t">Living labs and learning</span></a>
+            <a href="what-we-do.html#enterprise"><span class="t">Local enterprise development</span></a>
           </div>
         </div>
 
@@ -83,9 +83,9 @@
           </button>
           <div class="nav-dd-panel">
             <p class="dd-h">Demonstrations &amp; Evidence</p>
-            <a href="nakifuuma.html"><span class="t">Nakifuuma working site</span><span class="d">Five acres in Mukono, run as one system</span></a>
-            <a href="nakifuuma.html#measure"><span class="t">How we measure</span><span class="d">Baselines, service logs and published uptime</span></a>
-            <a href="nakifuuma.html#alignment"><span class="t">Sector alignment</span><span class="d">Where our practice meets national and continental plans</span></a>
+            <a href="nakifuuma.html"><span class="t">Nakifuuma working site</span></a>
+            <a href="nakifuuma.html#measure"><span class="t">How we measure</span></a>
+            <a href="nakifuuma.html#alignment"><span class="t">Sector alignment</span></a>
           </div>
         </div>
 
@@ -98,11 +98,11 @@
           </button>
           <div class="nav-dd-panel">
             <p class="dd-h">Partner &amp; Get Involved</p>
-            <a href="partnership.html"><span class="t">Partnership with CGSC</span><span class="d">CGSC models it. Regena proves it.</span></a>
-            <a href="who-its-for.html"><span class="t">Who it&rsquo;s for</span><span class="d">Funders, communities, students, researchers</span></a>
-            <a href="back-a-project.html"><span class="t">Back a project</span><span class="d">Fund the next proof point</span></a>
-            <a href="work-with-us.html" data-open-partner><span class="t">Work with us</span><span class="d">Tell us what you have in mind</span></a>
-            <a href="work-with-us.html" data-open-partner data-intent="Visit Nakifuuma"><span class="t">Plan a visit</span><span class="d">Come and see Nakifuuma first</span></a>
+            <a href="partnership.html"><span class="t">Partnership with CGSC</span></a>
+            <a href="who-its-for.html"><span class="t">Who it&rsquo;s for</span></a>
+            <a href="back-a-project.html"><span class="t">Back a project</span></a>
+            <a href="work-with-us.html" data-open-partner><span class="t">Work with us</span></a>
+            <a href="work-with-us.html" data-open-partner data-intent="Visit Nakifuuma"><span class="t">Plan a visit</span></a>
           </div>
         </div>
 
